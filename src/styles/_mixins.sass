@@ -1,0 +1,33 @@
+$light-yellow: #EFE9DB
+$light-grey: #BFB9AC
+$black: #000000
+
+$header-height: 140px
+
+=border-rds
+	border-radius: 32px
+=shadow
+	text-shadow: 0 1px 2px rgba(0, 0, 0, 0.6)
+=box-shadow
+	box-shadow: 0 4px 20px 0 rgb(0 0 0 / 5%)
+=block-shadow
+	box-shadow: 0 6px 16px rgba(0, 0, 0, 0.12)
+=flow
+	transition: all .25s
+=flow-slow($sec)
+	transition: all $sec
+=placeholder
+	&::-webkit-input-placeholder
+		@content
+	&:-moz-placeholder
+		@content
+	&::-moz-placeholder
+		@content
+	&:-ms-input-placeholder
+		@content
+=regular
+	font-family: "RobotoRegular", serif
+=bold
+	font-family: "RobotoBold", serif
+=lig
+	font-family: "RobotoLight", serif
