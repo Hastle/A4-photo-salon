@@ -1,7 +1,80 @@
+@import "mixins"
+/*==========  Fonts  ==========*/
+@import "fonts"
+/*==========  Libs  ==========*/
+@import "libs"
+
+html
+	margin-right: calc(-1 * (100vw - 100%))
+	overflow-x: hidden
 body
-	background-color: #222
+	margin: 0
+	background-color: $light-yellow
+	color: $black
+	+regular
+.App, #root
+	position: relative
+	min-height: 100vh
 	display: flex
-	justify-content: center
-	align-items: center
-	height: 100vh
-	color: pink
+	flex-direction: column
+a
+	color: $black
+	cursor: pointer
+	text-decoration: none
+	outline-style: none
+a:hover
+	text-decoration: none
+	outline-style: none
+a:focus
+	text-decoration: none
+	outline-style: none
+a:visited
+	text-decoration: none
+	outline-style: none
+img
+	display: inline-block
+	max-width: 100%
+	height: auto
+input, textarea
+	text-decoration: none
+	outline-style: none
+	font-size: 16px
+button
+	cursor: pointer
+	background-color: transparent
+	outline-style: none
+	border: none
+button:hover
+	background-color: transparent
+	outline-style: none
+button:focus
+	background-color: transparent
+	outline-style: none
+.text-center
+	text-align: center !important
+i
+	vertical-align: middle
+/*==========  General  ==========*/
+h3
+	+bold
+	font-size: 55px
+	margin: 0 0 2rem
+	color: $black
+	position: relative
+	&:after
+		content: ""
+		+border-rds
+		position: absolute
+		left: 0
+		bottom: -18px
+		width: 31vw
+		height: 5px
+		background-color: $black
+h4
+	color: $black
+	+bold
+	font-size: 40px
+p
+	color: $black
+	+regular
+	font-size: 36px
