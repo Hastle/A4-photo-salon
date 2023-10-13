@@ -17,7 +17,7 @@ const plugins = [
 	new HtmlWebpackPlugin({
 		template: './src/index.html',
 	}),
-	];
+];
 
 if (process.env.SERVE) {
 	plugins.push(new ReactRefreshWebpackPlugin());
@@ -34,7 +34,9 @@ module.exports = {
 		hot: true,
 		port: 3000,
 		open: true,
+		historyApiFallback: true,
 	},
+	cache: false,
 
 	output: {
 		path: path.resolve(__dirname, 'dist'),
@@ -52,7 +54,7 @@ module.exports = {
 					'css-loader',
 					'postcss-loader',
 					'sass-loader',
-					],
+				],
 			},
 			{
 				test: /\.(png|jpe?g|gif|svg|webp|ico)$/i,
@@ -68,10 +70,10 @@ module.exports = {
 				use: {
 					loader: 'babel-loader',
 					options: {
-						cacheDirectory: true,
+						cacheDirectory: false,
 					},
 				},
 			},
-			],
+		],
 	},
 };
