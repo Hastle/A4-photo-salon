@@ -1,25 +1,36 @@
 import React from "react";
 import { NavLink } from "react-router-dom";
+import { MdLocationOn } from "react-icons/md"
 import Logotype from "../Logotype/Logotype";
-import "./styles.sass";
+import officeList from "../../data/officeList";
+import styles from "./styles.module.sass";
 
-function Header() {
+function Header(props) {
+
+    const handleOfficeChange = (e) => {
+        const officeId = parseInt(e.target.value);
+        props.onOfficeChange(officeId);
+    }
+
     return (
-        <header>
-            <div className="main-menu">
+        <header className={styles.header}>
+            <div className={styles.main_menu}>
                 <Logotype />
-                <nav className="top-navigation">
-                    <NavLink className="menu-item" to='/photo-services'>Фотоуслуги</NavLink>
-                    <NavLink className="menu-item" to='/photo-souvenirs'>Фотосувениры</NavLink>
-                    <NavLink className="menu-item" to='/office-sevices'>Офисные услуги</NavLink>
-                    <NavLink className="menu-item" to='/other'>Другое</NavLink>
-                    <NavLink className="menu-item" to='/order'>Заказ</NavLink>
-                    <NavLink className="menu-item" to='/contacts'>Контакты</NavLink>
-                    <div className="menu-item">
-                        <select name="adress-current">
-                            <option value="value1" selected>Ярославль, Лента</option>
-                            <option value="value2">Ярославль, Глобус</option>
-                            <option value="value3">Ярославль, Рио</option>
+                <nav className={styles.top_navigation}>
+                    <NavLink className={styles.menu_item} to='/photo-services'>Фотоуслуги</NavLink>
+                    <NavLink className={styles.menu_item} to='/photo-souvenirs'>Фотосувениры</NavLink>
+                    <NavLink className={styles.menu_item} to='/office-sevices'>Офисные услуги</NavLink>
+                    <NavLink className={styles.menu_item} to='/other'>Другое</NavLink>
+                    <NavLink className={styles.menu_item} to='/order'>Заказ</NavLink>
+                    <NavLink className={styles.menu_item} to='/contacts'>Контакты</NavLink>
+                    <div className={styles.menu_item}>
+                        <MdLocationOn className={styles.icon}/>
+                        <select name="adress-current" value={props.selectedOfficeId} onChange={handleOfficeChange}>
+                            {officeList.map((office) => (
+                                <option key={office.id} value={office.id}>
+                                    {`${office.city}, ${office.department}`}
+                                </option>
+                            ))}
                         </select>
                     </div>
                 </nav>
