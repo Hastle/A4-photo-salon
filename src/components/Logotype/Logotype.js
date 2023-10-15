@@ -1,10 +1,10 @@
 import React from "react";
 import { NavLink } from "react-router-dom";
-import "./styles.sass";
+import styles from "./styles.module.sass";
 
 function Logotype() {
     return (
-        <NavLink className="logo" to='/'>
+        <NavLink className={styles.logo} to='/'>
             <svg xmlns="http://www.w3.org/2000/svg" width="142" height="59" viewBox="0 0 142 59" fill="none">
                 <g id="__x0023_Layer_x0020_1">
                     <path id="Vector" d="M85.625 13.0691L129.495 1L141.25 46.0432L97.3798 58.1123L85.625 13.0691Z" fill="#FEFEFE" stroke="#FEFEFE" strokeWidth="0.288"/>
