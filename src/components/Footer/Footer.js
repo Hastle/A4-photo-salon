@@ -1,18 +1,20 @@
 import React from "react";
 import Logotype from "../Logotype/Logotype";
-import "./styles.sass";
-function Footer() {
+import officeList from "../../data/officeList";
+import styles from "./styles.module.sass";
+function Footer(props) {
+
     return (
         <footer>
-            <div className="footer-container">
+            <div className={`container ${styles.footer_container}`}>
                 <Logotype />
-                <div className="footer-info">
-                    <div className="contacts">
-                        <p>Ленинградский проспект, 54А (1 этаж)</p>
-                        <p>Тел: 8(995)538-08-40</p>
+                <div className={styles.footer_info}>
+                    <div className={styles.contacts}>
+                        <p>{officeList.find(office => office.id === props.selectedOfficeId).address}</p>
+                        <p>Телефон: <a href={`tel:${officeList.find(office => office.id === props.selectedOfficeId).phone}`}>{officeList.find(office => office.id === props.selectedOfficeId).phone}</a></p>
                     </div>
-                    <div className="copyright">
-                        <p>© 2016-2023 "Фотосалон А4" - фотоуслуги в г. Ярославль</p>
+                    <div className={styles.copyright}>
+                        <p>© 2016-2023 "Фотосалон А4" - фотоуслуги в г. {officeList.find(office => office.id === props.selectedOfficeId).city}</p>
                     </div>
                 </div>
             </div>
