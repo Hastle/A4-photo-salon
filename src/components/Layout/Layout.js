@@ -1,18 +1,25 @@
-import React, { Component } from "react";
+import React, { useState } from "react";
 import Header from "../Header/Header";
 import Footer from "../Footer/Footer";
-import "./style.sass";
+import styles from "./style.module.sass";
 
 function Layout(props) {
+
+    const [selectedOfficeId, setSelectedOfficeId] = useState(1);
+    const handleOfficeChange = (officeId) => {
+        setSelectedOfficeId(officeId);
+        props.onOfficeChange(officeId);
+    }
+
     return (
         <div>
-            <Header />
-            <div className="container wrapper">
+            <Header selectedOfficeId={selectedOfficeId} onOfficeChange={handleOfficeChange} />
+            <div className={`container ${styles.wrapper}`}>
                 <div className="row">
                     {props.children}
                 </div>
             </div>
-            <Footer />
+            <Footer selectedOfficeId={selectedOfficeId} />
         </div>
     );
 }
