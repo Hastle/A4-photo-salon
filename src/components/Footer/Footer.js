@@ -1,8 +1,19 @@
-import React from "react";
-import Logotype from "../Logotype/Logotype";
-import officeList from "../../data/officeList";
-import styles from "./styles.module.sass";
-function Footer(props) {
+import React, { useEffect, useState } from 'react';
+import Logotype from '../Logotype/Logotype';
+import officeList from '../../data/officeList';
+import { useSelectedValue } from '../../context/SelectedValueContext';
+import styles from './styles.module.sass';
+
+function Footer() {
+    const { selectedValue } = useSelectedValue();
+    const [selectedOffice, setSelectedOffice] = useState(null);
+
+    useEffect(() => {
+        const selectedOffice = officeList.find(office => office.id === selectedValue);
+        console.log('selectedValue:', selectedValue);
+        console.log('office:', selectedOffice);
+        setSelectedOffice(selectedOffice);
+    }, [selectedValue]);
 
     return (
         <footer>
@@ -10,11 +21,12 @@ function Footer(props) {
                 <Logotype />
                 <div className={styles.footer_info}>
                     <div className={styles.contacts}>
-                        <p>{officeList.find(office => office.id === props.selectedOfficeId).address}</p>
-                        <p>Телефон: <a href={`tel:${officeList.find(office => office.id === props.selectedOfficeId).phone}`}>{officeList.find(office => office.id === props.selectedOfficeId).phone}</a></p>
+                        {selectedOffice && (
+                            <p>Телефон: <a href={`tel:${selectedOffice.phone}`}>{selectedOffice.phone}</a></p>
+                        )}
                     </div>
                     <div className={styles.copyright}>
-                        <p>© 2016-2023 "Фотосалон А4" - фотоуслуги в г. {officeList.find(office => office.id === props.selectedOfficeId).city}</p>
+                        <p>© 2016-2023 "Фотосалон А4" - фотоуслуги в г. {selectedOffice.city}</p>
                     </div>
                 </div>
             </div>
