@@ -21,12 +21,10 @@ function Footer() {
                 <Logotype />
                 <div className={styles.footer_info}>
                     <div className={styles.contacts}>
-                        {selectedOffice && (
-                            <p>Телефон: <a href={`tel:${selectedOffice.phone}`}>{selectedOffice.phone}</a></p>
-                        )}
+                        <p>Телефон: <a href={`tel:${selectedOffice ? selectedOffice.phone : officeList[0].phone}`}>{selectedOffice ? selectedOffice.phone : officeList[0].phone}</a></p>
                     </div>
                     <div className={styles.copyright}>
-                        <p>© 2016-2023 "Фотосалон А4" - фотоуслуги в г. {selectedOffice.city}</p>
+                        <p>© 2016-2023 "Фотосалон А4" - фотоуслуги в г. {selectedOffice ? selectedOffice.city : officeList[0].city}</p>
                     </div>
                 </div>
             </div>
