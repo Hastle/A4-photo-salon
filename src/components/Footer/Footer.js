@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import Logotype from '../Logotype/Logotype';
-import officeList from '../../data/officeList';
 import { useSelectedValue } from '../../context/SelectedValueContext';
+import officeList from '../../data/officeList';
 import styles from './styles.module.sass';
 
 function Footer() {
@@ -10,8 +10,6 @@ function Footer() {
 
     useEffect(() => {
         const selectedOffice = officeList.find(office => office.id === selectedValue);
-        console.log('selectedValue:', selectedValue);
-        console.log('office:', selectedOffice);
         setSelectedOffice(selectedOffice);
     }, [selectedValue]);
 
