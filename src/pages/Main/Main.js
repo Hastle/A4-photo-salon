@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import Layout from "../../components/Layout/Layout";
 import styles from "./styles.module.sass";
-import Slider from "../../assets/images/slider-1.png";
+import Slider from "../../assets/images/slider/slider-1.png";
 function Main() {
     return (
         <Layout>
