@@ -24,7 +24,7 @@ function PhotoServices() {
             </div>
             {selectedOfficeData &&
                 selectedOfficeData.services.map((service) => (
-                    <CategoryInfo key={service.id} officeId={selectedOffice} categoryName={service.name} />
+                    <CategoryInfo key={service.name} officeId={selectedOffice} categoryName={service.name} responseData={photoServicesList} />
                 ))
             }
         </Layout>
