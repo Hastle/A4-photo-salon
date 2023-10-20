@@ -1,9 +1,9 @@
 import React from "react";
-import photoServicesList from "../../data/photoServicesList";
+import styles from "./styles.module.sass";
 
-const CategoryInfo = ({ officeId, categoryName }) => {
+const CategoryInfo = ({ officeId, categoryName, responseData }) => {
 
-    const officeData = photoServicesList.find((item) => item.id === officeId);
+    const officeData = responseData.find((item) => item.id === officeId);
 
     if (!officeData) {
         return <p>Данные для магазина {officeId} не найдены.</p>;
@@ -20,19 +20,33 @@ const CategoryInfo = ({ officeId, categoryName }) => {
     }
 
     return (
-        <div className="col-md-8">
-            <h4>{categoryName}</h4>
-            {categoryData.products.map((product) => (
-                <div key={product.size}>
-                    <p>{product.size}</p>
-                    {product.options &&
-                        Object.keys(product.options).map((optionName) => (
-                            <p key={optionName}>{optionName} {product.options[optionName]}</p>
-                        ))}
-                </div>
-            ))}
-        </div>
+        <>
+            <div className="col-md-8">
+                <h4>{categoryName}</h4>
+                {categoryData.products.map((product) => (
+                    <div key={`${categoryName}-${product.title}`}>
+                        <p>{product.title}</p>
+                        {product.options &&
+                            Object.keys(product.options).map((optionName) => (
+                                <p key={optionName}>
+                                    {optionName} {typeof product.options[optionName] === 'object'
+                                    ? Object.keys(product.options[optionName]).map((subOption) => (
+                                        <p key={subOption}>{subOption} {product.options[optionName][subOption]}</p>
+                                    ))
+                                    : product.options[optionName]}
+                                </p>
+                            ))}
+                    </div>
+                ))}
+            </div>
+            <div className="col-md-4">
+                {categoryData.images && categoryData.images.map((image, index) => (
+                    <img key={index} className={styles.img_box} src={image} alt={categoryName} />
+                ))}
+            </div>
+        </>
     );
+
 };
 
 export default CategoryInfo;
