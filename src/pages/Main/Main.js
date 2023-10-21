@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React from 'react';
 import Layout from "../../components/Layout/Layout";
 import styles from "./styles.module.sass";
 import Slider from "../../assets/images/slider/slider-1.png";
