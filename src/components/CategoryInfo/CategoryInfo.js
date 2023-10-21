@@ -25,7 +25,8 @@ const CategoryInfo = ({ officeId, categoryName, responseData }) => {
                 <h4>{categoryName}</h4>
                 {categoryData.products.map((product) => (
                     <div key={`${categoryName}-${product.title}`}>
-                        <p>{product.title}</p>
+                        <p className={styles.headline}>{product.title}</p>
+                        {product.description && <p>{product.description}</p>}
                         {product.options &&
                             Object.keys(product.options).map((optionName) => (
                                 <p key={optionName}>
@@ -35,11 +36,12 @@ const CategoryInfo = ({ officeId, categoryName, responseData }) => {
                                     ))
                                     : product.options[optionName]}
                                 </p>
-                            ))}
+                            ))
+                        }
                     </div>
                 ))}
             </div>
-            <div className="col-md-4">
+            <div className={`col-md-4 ${styles.justify_content}`}>
                 {categoryData.images && categoryData.images.map((image, index) => (
                     <img key={index} className={styles.img_box} src={image} alt={categoryName} />
                 ))}
