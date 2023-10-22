@@ -2,6 +2,7 @@ import Polaroid_1 from "../assets/images/photo-services/polaroid-1.png";
 import Polaroid_2 from "../assets/images/photo-services/polaroid-2.png";
 import Polaroid_3 from "../assets/images/photo-services/polaroid-3.png";
 import Polaroid_4 from "../assets/images/photo-services/polaroid-4.png";
+
 const photoServicesList = [
     {
         id: 1,
@@ -11,67 +12,132 @@ const photoServicesList = [
                 products: [
                     {
                         title: '7,5х10',
-                        options: {
-                            'Срочно': '12р',
-                            'Не срочно': {
-                                'от 10 шт.': '16р',
-                                'от 100 шт.': '14р'
+                        options: [
+                            {
+                                subtitle: 'Срочно',
+                                price: '12р'
+                            },
+                            {
+                                subtitle: 'Не срочно',
+                                price: [
+                                    {
+                                        quantity: 'от 10 шт.',
+                                        price: '16р'
+                                    },
+                                    {
+                                        quantity: 'от 100 шт.',
+                                        price: '14р'
+                                    }
+                                ]
                             }
-                        }
+                        ]
                     },
                     {
                         title: '10х15',
-                        options: {
-                            'Срочно': '20р',
-                            'Не срочно': {
-                                'от 10 шт.': '25р',
-                                'от 100 шт.': '20р'
+                        options: [
+                            {
+                                subtitle: 'Срочно',
+                                price: '20р'
+                            },
+                            {
+                                subtitle: 'Не срочно',
+                                price: [
+                                    {
+                                        quantity: 'от 10 шт.',
+                                        price: '25р'
+                                    },
+                                    {
+                                        quantity: 'от 100 шт.',
+                                        price: '20р'
+                                    }
+                                ]
                             }
-                        }
+                        ]
                     },
                     {
                         title: '13х18',
-                        options: {
-                            'Срочно': '30р',
-                            'Не срочно': {
-                                'от 10 шт.': '40р',
-                                'от 50 шт.': '35р'
+                        options: [
+                            {
+                                subtitle: 'Срочно',
+                                price: '30р'
+                            },
+                            {
+                                subtitle: 'Не срочно',
+                                price: [
+                                    {
+                                        quantity: 'от 10 шт.',
+                                        price: '40р'
+                                    },
+                                    {
+                                        quantity: 'от 50 шт.',
+                                        price: '35р'
+                                    }
+                                ]
                             }
-                        }
+                        ]
                     },
                     {
                         title: '15х21 (с полями 3мм)',
-                        options: {
-                            'Срочно': '40р',
-                            'Не срочно': {
-                                'от 10 шт.': '50р',
-                                'от 30 шт.': '45р'
+                        options: [
+                            {
+                                subtitle: 'Срочно',
+                                price: '40р'
+                            },
+                            {
+                                subtitle: 'Не срочно',
+                                price: [
+                                    {
+                                        quantity: 'от 10 шт.',
+                                        price: '50р'
+                                    },
+                                    {
+                                        quantity: 'от 30 шт.',
+                                        price: '45р'
+                                    }
+                                ]
                             }
-                        }
+                        ]
                     },
                     {
                         title: '21х30',
-                        options: {
-                            'Срочно': '100р',
-                            'Не срочно': {
-                                'от 10 шт.': '140р',
-                                'от 20 шт.': '120р'
+                        options: [
+                            {
+                                subtitle: 'Срочно',
+                                price: '100р'
+                            },
+                            {
+                                subtitle: 'Не срочно',
+                                price: [
+                                    {
+                                        quantity: 'от 10 шт.',
+                                        price: '140р'
+                                    },
+                                    {
+                                        quantity: 'от 20 шт.',
+                                        price: '120р'
+                                    }
+                                ]
                             }
-                        }
+                        ]
                     },
                     {
                         title: '30х40',
-                        options: {
-                            'Срочно': '180р',
-                            'Не срочно': {
-                                'от 5 шт.': '220р'
+                        options: [
+                            {
+                                subtitle: 'Срочно',
+                                price: '180р'
+                            },
+                            {
+                                subtitle: 'Не срочно',
+                                price: [
+                                    {
+                                        quantity: 'от 5 шт.',
+                                        price: '220р'
+                                    }
+                                ]
                             }
-                        }
+                        ]
                     },
-                    // {
-                    //     title: 'Печать на самоклеющейся бумаге',
-                    //     price: '200р'
-                    // },
                 ],
                 images: [Polaroid_1, Polaroid_2, Polaroid_3],
             },
@@ -80,23 +146,47 @@ const photoServicesList = [
                 products: [
                     {
                         title: '10х15',
-                        options: {
-                            'Срочно': '24р',
-                            'Не срочно': {
-                                'от 10 шт.': '30р',
-                                'от 100 шт.': '28р'
+                        options: [
+                            {
+                                subtitle: 'Срочно',
+                                price: '24р'
+                            },
+                            {
+                                subtitle: 'Не срочно',
+                                price: [
+                                    {
+                                        quantity: 'от 10 шт.',
+                                        price: '30р'
+                                    },
+                                    {
+                                        quantity: 'от 100 шт.',
+                                        price: '28р'
+                                    }
+                                ]
                             }
-                        }
+                        ]
                     },
                     {
                         title: '21х30',
-                        options: {
-                            'Срочно': '140р',
-                            'Не срочно': {
-                                'от 10 шт.': '160р',
-                                'от 20 шт.': '150р'
+                        options: [
+                            {
+                                subtitle: 'Срочно',
+                                price: '140р'
+                            },
+                            {
+                                subtitle: 'Не срочно',
+                                price: [
+                                    {
+                                        quantity: 'от 10 шт.',
+                                        price: '160р'
+                                    },
+                                    {
+                                        quantity: 'от 20 шт.',
+                                        price: '150р'
+                                    }
+                                ]
                             }
-                        }
+                        ]
                     },
                 ],
                 images: [Polaroid_4],
@@ -106,17 +196,29 @@ const photoServicesList = [
                 products: [
                     {
                         title: '7,5х10',
-                        options: {
-                            'Срочно': '30р',
-                            'Не срочно': '40р',
-                        }
+                        options: [
+                            {
+                                subtitle: 'Срочно',
+                                price: '30р'
+                            },
+                            {
+                                subtitle: 'Не срочно',
+                                price: '40р'
+                            }
+                        ]
                     },
                     {
                         title: '9х11',
-                        options: {
-                            'Срочно': '40р',
-                            'Не срочно': '50р',
-                        }
+                        options: [
+                            {
+                                subtitle: 'Срочно',
+                                price: '40р'
+                            },
+                            {
+                                subtitle: 'Не срочно',
+                                price: '50р'
+                            }
+                        ]
                     },
                 ]
             },
@@ -125,17 +227,29 @@ const photoServicesList = [
                 products: [
                     {
                         title: 'А2',
-                        options: {
-                            'Без натяжки': '840р',
-                            'С натяжкой': '1220р',
-                        }
+                        options: [
+                            {
+                                subtitle: 'Без натяжки',
+                                price: '840р'
+                            },
+                            {
+                                subtitle: 'С натяжкой',
+                                price: '1220р'
+                            }
+                        ]
                     },
                     {
                         title: 'А1',
-                        options: {
-                            'Без натяжки': '840р',
-                            'С натяжкой': '1220р',
-                        }
+                        options: [
+                            {
+                                subtitle: 'Без натяжки',
+                                price: '840р'
+                            },
+                            {
+                                subtitle: 'С натяжкой',
+                                price: '1220р'
+                            }
+                        ]
                     },
                 ]
             },
@@ -144,11 +258,20 @@ const photoServicesList = [
                 products: [
                     {
                         title: 'Фото на документы',
-                        options: {
-                            'Дополнительный блок фотографий': '100р',
-                            'Подстановка формы и знаков отличия': '150р',
-                            'Фото Green Card': '400р',
-                        }
+                        options: [
+                            {
+                                subtitle: 'Дополнительный блок фотографий',
+                                price: '100р'
+                            },
+                            {
+                                subtitle: 'Подстановка формы и знаков отличия',
+                                price: '150р'
+                            },
+                            {
+                                subtitle: 'Фото Green Card',
+                                price: '400р'
+                            }
+                        ]
                     },
                 ]
             },
@@ -171,24 +294,42 @@ const photoServicesList = [
                 products: [
                     {
                         title: '30х40 см',
-                        options: {
-                            'Без натяжки': '2230р',
-                            'С натяжкой': '2330р',
-                        }
+                        options: [
+                            {
+                                subtitle: 'Без натяжки',
+                                price: '2230р'
+                            },
+                            {
+                                subtitle: 'С натяжкой',
+                                price: '2330р'
+                            }
+                        ]
                     },
                     {
                         title: '40х40 см',
-                        options: {
-                            'Без натяжки': '2500р',
-                            'С натяжкой': '2650р',
-                        }
+                        options: [
+                            {
+                                subtitle: 'Без натяжки',
+                                price: '2500р'
+                            },
+                            {
+                                subtitle: 'С натяжкой',
+                                price: '2650р'
+                            }
+                        ]
                     },
                     {
                         title: '40х50 см',
-                        options: {
-                            'Без натяжки': '2700р',
-                            'С натяжкой': '2600р',
-                        }
+                        options: [
+                            {
+                                subtitle: 'Без натяжки',
+                                price: '2700р'
+                            },
+                            {
+                                subtitle: 'С натяжкой',
+                                price: '2600р'
+                            }
+                        ]
                     },
                     // Добавьте остальные размеры и опции
                 ]
@@ -198,17 +339,29 @@ const photoServicesList = [
                 products: [
                     {
                         title: '30х40 см',
-                        options: {
-                            'Без рамки': '1400р',
-                            'С рамкой': '1550р',
-                        }
+                        options: [
+                            {
+                                subtitle: 'Без рамки',
+                                price: '1400р'
+                            },
+                            {
+                                subtitle: 'С рамкой',
+                                price: '1550р'
+                            }
+                        ]
                     },
                     {
                         title: '40х40 см',
-                        options: {
-                            'Без рамки': '1600р',
-                            'С рамкой': '1750р',
-                        }
+                        options: [
+                            {
+                                subtitle: 'Без рамки',
+                                price: '1600р'
+                            },
+                            {
+                                subtitle: 'С рамкой',
+                                price: '1750р'
+                            }
+                        ]
                     },
                     // Добавьте остальные размеры и опции
                 ]
