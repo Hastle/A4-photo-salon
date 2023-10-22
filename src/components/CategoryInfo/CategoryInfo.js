@@ -22,19 +22,19 @@ const CategoryInfo = ({ officeId, categoryName, responseData }) => {
         <>
             <div className="col-md-8">
                 <h4>{categoryName}</h4>
-                {categoryData.products.map((product) => (
-                    <div key={product.title}>
+                {categoryData.products.map((product, index) => (
+                    <div key={index}>
                         <p className={styles.headline}>{product.title}</p>
                         {product.description && <p>{product.description}</p>}
                         {product.options && (
                             <div>
-                                {product.options.map((option) => (
-                                    <div key={option.subtitle}>
+                                {product.options.map((option, index) => (
+                                    <div key={index}>
                                         {Array.isArray(option.price) ? (
                                             <>
                                                 <p>{option.subtitle}</p>
-                                                {option.price.map((subOption) => (
-                                                    <div className={styles.row_item} key={subOption.quantity}>
+                                                {option.price.map((subOption, index) => (
+                                                    <div className={styles.row_item} key={index}>
                                                         <p>{subOption.quantity}</p>
                                                         <span className={styles.line}></span>
                                                         <p>{subOption.price}</p>
