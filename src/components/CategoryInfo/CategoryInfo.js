@@ -55,7 +55,7 @@ const CategoryInfo = ({ officeId, categoryName, responseData }) => {
                     </div>
                 ))}
             </div>
-            <div className={`col-md-4 ${styles.justify_content}`}>
+            <div className={`col-md-4 ${styles.image_info}`}>
                 {categoryData.images && categoryData.images.map((image, index) => (
                     <img key={index} className={styles.img_box} src={image} alt={categoryName} />
                 ))}
