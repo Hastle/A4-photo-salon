@@ -2,7 +2,6 @@ import React from "react";
 import styles from "./styles.module.sass";
 
 const CategoryInfo = ({ officeId, categoryName, responseData }) => {
-
     const officeData = responseData.find((item) => item.id === officeId);
 
     if (!officeData) {
@@ -24,20 +23,35 @@ const CategoryInfo = ({ officeId, categoryName, responseData }) => {
             <div className="col-md-8">
                 <h4>{categoryName}</h4>
                 {categoryData.products.map((product) => (
-                    <div key={`${categoryName}-${product.title}`}>
+                    <div key={product.title}>
                         <p className={styles.headline}>{product.title}</p>
                         {product.description && <p>{product.description}</p>}
-                        {product.options &&
-                            Object.keys(product.options).map((optionName) => (
-                                <p key={optionName}>
-                                    {optionName} {typeof product.options[optionName] === 'object'
-                                    ? Object.keys(product.options[optionName]).map((subOption) => (
-                                        <p key={subOption}>{subOption} {product.options[optionName][subOption]}</p>
-                                    ))
-                                    : product.options[optionName]}
-                                </p>
-                            ))
-                        }
+                        {product.options && (
+                            <div>
+                                {product.options.map((option) => (
+                                    <div key={option.subtitle}>
+                                        {Array.isArray(option.price) ? (
+                                            <>
+                                                <p>{option.subtitle}</p>
+                                                {option.price.map((subOption) => (
+                                                    <div className={styles.row_item} key={subOption.quantity}>
+                                                        <p>{subOption.quantity}</p>
+                                                        <span className={styles.line}></span>
+                                                        <p>{subOption.price}</p>
+                                                    </div>
+                                                ))}
+                                            </>
+                                        ) : (
+                                            <div className={styles.row_item}>
+                                                <p>{option.subtitle}</p>
+                                                <span className={styles.line}></span>
+                                                <p>{option.price}</p>
+                                            </div>
+                                        )}
+                                    </div>
+                                ))}
+                            </div>
+                        )}
                     </div>
                 ))}
             </div>
@@ -48,7 +62,6 @@ const CategoryInfo = ({ officeId, categoryName, responseData }) => {
             </div>
         </>
     );
-
 };
 
 export default CategoryInfo;
