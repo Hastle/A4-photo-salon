@@ -1,7 +1,8 @@
 import React from 'react';
 import Layout from "../../components/Layout/Layout";
 import styles from "./styles.module.sass";
-import Slider from "../../assets/images/slider/slider-1.png";
+import Carousel from "../../components/Carousel/Carousel";
+
 function Main() {
     return (
         <Layout>
@@ -11,10 +12,8 @@ function Main() {
                 <p>Быстрое изготовление</p>
                 <p>Качественная работа</p>
             </div>
-            <div className="col">
-                <div className={styles.img_box}>
-                    <img src={Slider} alt=""/>
-                </div>
+            <div className="col-md-7">
+                <Carousel />
             </div>
         </Layout>
     );
