@@ -21,13 +21,9 @@ const photoServicesList = [
                                 subtitle: 'Не срочно',
                                 price: [
                                     {
-                                        quantity: 'от 10 шт.',
-                                        price: '16р'
+                                        quantity: 'от 20 шт.',
+                                        price: '10р'
                                     },
-                                    {
-                                        quantity: 'от 100 шт.',
-                                        price: '14р'
-                                    }
                                 ]
                             }
                         ]
@@ -37,18 +33,22 @@ const photoServicesList = [
                         options: [
                             {
                                 subtitle: 'Срочно',
-                                price: '20р'
+                                price: '25р'
                             },
                             {
                                 subtitle: 'Не срочно',
                                 price: [
                                     {
                                         quantity: 'от 10 шт.',
-                                        price: '25р'
+                                        price: '16р'
                                     },
                                     {
                                         quantity: 'от 100 шт.',
-                                        price: '20р'
+                                        price: '12р'
+                                    },
+                                    {
+                                        quantity: 'от 300 шт.',
+                                        price: '10р'
                                     }
                                 ]
                             }
@@ -59,21 +59,8 @@ const photoServicesList = [
                         options: [
                             {
                                 subtitle: 'Срочно',
-                                price: '30р'
+                                price: '35р'
                             },
-                            {
-                                subtitle: 'Не срочно',
-                                price: [
-                                    {
-                                        quantity: 'от 10 шт.',
-                                        price: '40р'
-                                    },
-                                    {
-                                        quantity: 'от 50 шт.',
-                                        price: '35р'
-                                    }
-                                ]
-                            }
                         ]
                     },
                     {
@@ -81,18 +68,18 @@ const photoServicesList = [
                         options: [
                             {
                                 subtitle: 'Срочно',
-                                price: '40р'
+                                price: '48р'
                             },
                             {
                                 subtitle: 'Не срочно',
                                 price: [
                                     {
                                         quantity: 'от 10 шт.',
-                                        price: '50р'
+                                        price: '34р'
                                     },
                                     {
-                                        quantity: 'от 30 шт.',
-                                        price: '45р'
+                                        quantity: 'от 100 шт.',
+                                        price: '22р'
                                     }
                                 ]
                             }
@@ -103,18 +90,18 @@ const photoServicesList = [
                         options: [
                             {
                                 subtitle: 'Срочно',
-                                price: '100р'
+                                price: '120р'
                             },
                             {
                                 subtitle: 'Не срочно',
                                 price: [
                                     {
                                         quantity: 'от 10 шт.',
-                                        price: '140р'
+                                        price: '85р'
                                     },
                                     {
-                                        quantity: 'от 20 шт.',
-                                        price: '120р'
+                                        quantity: 'от 15 шт.',
+                                        price: '70р'
                                     }
                                 ]
                             }
@@ -125,17 +112,8 @@ const photoServicesList = [
                         options: [
                             {
                                 subtitle: 'Срочно',
-                                price: '180р'
+                                price: '240р'
                             },
-                            {
-                                subtitle: 'Не срочно',
-                                price: [
-                                    {
-                                        quantity: 'от 5 шт.',
-                                        price: '220р'
-                                    }
-                                ]
-                            }
                         ]
                     },
                 ],
@@ -149,18 +127,18 @@ const photoServicesList = [
                         options: [
                             {
                                 subtitle: 'Срочно',
-                                price: '24р'
+                                price: '35р'
                             },
                             {
                                 subtitle: 'Не срочно',
                                 price: [
                                     {
-                                        quantity: 'от 10 шт.',
-                                        price: '30р'
+                                        quantity: 'от 15 шт.',
+                                        price: '22р'
                                     },
                                     {
                                         quantity: 'от 100 шт.',
-                                        price: '28р'
+                                        price: '18р'
                                     }
                                 ]
                             }
@@ -171,84 +149,55 @@ const photoServicesList = [
                         options: [
                             {
                                 subtitle: 'Срочно',
-                                price: '140р'
+                                price: '150р'
                             },
                             {
                                 subtitle: 'Не срочно',
                                 price: [
                                     {
-                                        quantity: 'от 10 шт.',
-                                        price: '160р'
+                                        quantity: 'от 15 шт.',
+                                        price: '100р'
                                     },
-                                    {
-                                        quantity: 'от 20 шт.',
-                                        price: '150р'
-                                    }
                                 ]
                             }
                         ]
                     },
-                ],
-                images: [Polaroid_4],
-            },
-            {
-                name: 'Полароид',
-                products: [
                     {
-                        title: '7,5х10',
                         options: [
                             {
-                                subtitle: 'Срочно',
+                                subtitle: 'Полароид 7,5х10',
                                 price: '30р'
                             },
                             {
-                                subtitle: 'Не срочно',
-                                price: '40р'
-                            }
-                        ]
-                    },
-                    {
-                        title: '9х11',
-                        options: [
-                            {
-                                subtitle: 'Срочно',
+                                subtitle: 'Полароид 9х11',
                                 price: '40р'
                             },
                             {
-                                subtitle: 'Не срочно',
-                                price: '50р'
+                                subtitle: 'Печать на самоклеющейся бумаге',
+                                price: '200р'
                             }
                         ]
-                    },
-                ]
+                    }
+                ],
+                images: [Polaroid_4],
             },
             {
                 name: 'Широкоформатная фотопечать (глянцевая, матовая бумага)',
                 products: [
                     {
-                        title: 'А2',
                         options: [
                             {
-                                subtitle: 'Без натяжки',
+                                subtitle: '40x60',
                                 price: '840р'
                             },
                             {
-                                subtitle: 'С натяжкой',
-                                price: '1220р'
-                            }
-                        ]
-                    },
-                    {
-                        title: 'А1',
-                        options: [
-                            {
-                                subtitle: 'Без натяжки',
-                                price: '840р'
+                                subtitle: '50x70',
+                                price: '1043р'
                             },
                             {
-                                subtitle: 'С натяжкой',
+                                subtitle: '60x90',
                                 price: '1220р'
-                            }
+                            },
                         ]
                     },
                 ]
@@ -257,8 +206,12 @@ const photoServicesList = [
                 name: 'Фото на документы',
                 products: [
                     {
-                        title: 'Фото на документы',
+                        description: 'В стоимость услуги входит: съемка, базовая ретушь, печать фотографий. Вы также можете получить электронный вариант фотографии на почту бесплатно.',
                         options: [
+                            {
+                                subtitle: 'Фото на документы',
+                                price: '350р'
+                            },
                             {
                                 subtitle: 'Дополнительный блок фотографий',
                                 price: '100р'
@@ -277,6 +230,7 @@ const photoServicesList = [
             },
             {
                 name: 'Реставрация, дизайн и ретушь',
+                price: 'от 400р',
                 products: [
                     {
                         description: 'Реставрация — это восстановление поврежденной фотографии. Комплекс действий для каждого кадра индивидуальный, в результате чего и формируется стоимость услуги.',
