@@ -55,8 +55,6 @@ button:focus
 	outline-style: none
 .text-center
 	text-align: center !important
-i
-	vertical-align: middle
 /*==========  General  ==========*/
 h3
 	+bold
@@ -82,3 +80,14 @@ p
 	color: $black
 	+regular
 	font-size: 24px
+/*==========  Carousel  ==========*/
+.carousel
+	display: flex
+	justify-content: center
+	align-items: center
+	.slick-list
+		width: 100%
+		box-shadow: -4px 4px 21px -6px rgba(0, 0, 0, 0.41)
+		+border-rds
+		div
+			display: flex
