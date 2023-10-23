@@ -21,10 +21,18 @@ const CategoryInfo = ({ officeId, categoryName, responseData }) => {
     return (
         <>
             <div className="col-md-8">
-                <h4>{categoryName}</h4>
+                {categoryData.price ? (
+                    <div className={styles.row_item}>
+                        <h4>{categoryName}</h4>
+                        <span className={styles.line}></span>
+                        <p>{categoryData.price}</p>
+                    </div>
+                ) : (
+                    <h4>{categoryName}</h4>
+                )}
                 {categoryData.products.map((product, index) => (
                     <div key={index}>
-                        <p className={styles.headline}>{product.title}</p>
+                        {product.title && <p className={styles.headline}>{product.title}</p>}
                         {product.description && <p>{product.description}</p>}
                         {product.options && (
                             <div>
