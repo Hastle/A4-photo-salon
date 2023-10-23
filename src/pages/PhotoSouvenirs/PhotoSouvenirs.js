@@ -4,7 +4,9 @@ import Layout from "../../components/Layout/Layout";
 function PhotoSouvenirs() {
     return (
         <Layout>
-            <h1>Photo Souvenirs page</h1>
+            <div className="col-md-12">
+                <h3>Фотосувениры</h3>
+            </div>
         </Layout>
     );
 }

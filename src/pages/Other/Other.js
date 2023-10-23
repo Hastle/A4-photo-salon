@@ -4,7 +4,9 @@ import Layout from "../../components/Layout/Layout";
 function Other() {
     return (
         <Layout>
-            <h1>Other page</h1>
+            <div className="col-md-12">
+                <h3>Визитки</h3>
+            </div>
         </Layout>
     );
 }

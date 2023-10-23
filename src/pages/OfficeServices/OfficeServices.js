@@ -4,7 +4,9 @@ import Layout from "../../components/Layout/Layout";
 function OfficeServices() {
     return (
         <Layout>
-            <h1>Office Services page</h1>
+            <div className="col-md-12">
+                <h3>Офисные услуги</h3>
+            </div>
         </Layout>
     );
 }
