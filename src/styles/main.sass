@@ -56,6 +56,8 @@ button:focus
 .text-center
 	text-align: center !important
 /*==========  General  ==========*/
+.justify-content-center
+	display: flex
 h3
 	+bold
 	font-size: 31px
@@ -91,3 +93,10 @@ p
 		+border-rds
 		div
 			display: flex
+/*==========  CompareImage  ==========*/
+.before-after-slider
+	max-width: 450px
+	overflow: hidden
+	.before-after-slider__delimiter
+		&:hover
+			cursor: col-resize
