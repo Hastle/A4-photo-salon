@@ -1,9 +1,9 @@
-import React, { useState, useEffect } from "react";
+import React, { useEffect } from "react";
 import { NavLink } from "react-router-dom";
 import { MdLocationOn } from "react-icons/md";
 import Logotype from "../Logotype/Logotype";
 import officeList from "../../data/officeList";
-import {useSelectedValue} from "../../context/SelectedValueContext";
+import { useSelectedValue } from "../../context/SelectedValueContext";
 import styles from "./styles.module.sass";
 
 function Header() {
