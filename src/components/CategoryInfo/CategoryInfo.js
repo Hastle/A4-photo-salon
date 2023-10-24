@@ -1,5 +1,6 @@
 import React from "react";
 import styles from "./styles.module.sass";
+import CompareImage from "../CompareImage/CompareImage";
 
 const CategoryInfo = ({ officeId, categoryName, responseData }) => {
     const officeData = responseData.find((item) => item.id === officeId);
@@ -68,6 +69,11 @@ const CategoryInfo = ({ officeId, categoryName, responseData }) => {
                     <img key={index} className={styles.img_box} src={image} alt={categoryName} />
                 ))}
             </div>
+            {categoryName === 'Фото на документы' ? (
+                <div className="col-md-12 justify-content-center">
+                    <CompareImage />
+                </div>
+            ) : null}
         </>
     );
 };
