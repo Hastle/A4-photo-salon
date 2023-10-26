@@ -3,10 +3,6 @@ import Polaroid_2 from "../assets/images/photo-souvenirs/polaroid-2.png";
 import Polaroid_5 from "../assets/images/photo-souvenirs/polaroid-5.png";
 import Polaroid_6 from "../assets/images/photo-souvenirs/polaroid-6.png";
 
-import Polaroid_3 from "../assets/images/photo-services/polaroid-3.png";
-import Polaroid_4 from "../assets/images/photo-services/polaroid-4.png";
-import CommonCard from "../assets/images/photo-services/common-card.png";
-
 const photoSouvenirsList = [
     {
         id: 1,
