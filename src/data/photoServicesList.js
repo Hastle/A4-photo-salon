@@ -2,6 +2,7 @@ import Polaroid_1 from "../assets/images/photo-services/polaroid-1.png";
 import Polaroid_2 from "../assets/images/photo-services/polaroid-2.png";
 import Polaroid_3 from "../assets/images/photo-services/polaroid-3.png";
 import Polaroid_4 from "../assets/images/photo-services/polaroid-4.png";
+import CommonCard from "../assets/images/photo-services/common-card.png";
 
 const photoServicesList = [
     {
@@ -117,7 +118,7 @@ const photoServicesList = [
                         ]
                     },
                 ],
-                images: [Polaroid_1, Polaroid_2, Polaroid_3],
+                sideImages: [Polaroid_1, Polaroid_2, Polaroid_3],
             },
             {
                 name: 'Фотопечать на сатиновой или шёлковой фотобумаге',
@@ -179,7 +180,7 @@ const photoServicesList = [
                         ]
                     }
                 ],
-                images: [Polaroid_4],
+                sideImages: [Polaroid_4],
             },
             {
                 name: 'Широкоформатная фотопечать (глянцевая, матовая бумага)',
@@ -241,7 +242,8 @@ const photoServicesList = [
                     {
                         description: 'Ретушь — это обработка фотографии с целью улучшения и исправления внешнего вида кадра.',
                     },
-                ]
+                ],
+                lowerImages: [CommonCard],
             },
             {
                 name: 'Печать на холсте',
