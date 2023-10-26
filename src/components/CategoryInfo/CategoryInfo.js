@@ -15,10 +15,6 @@ const CategoryInfo = ({ officeId, categoryName, responseData }) => {
         return <p>Данные для категории {categoryName} не найдены.</p>;
     }
 
-    if (!categoryData.products) {
-        return <p>Данные для продуктов категории {categoryName} не найдены.</p>;
-    }
-
     return (
         <>
             <div className="col-md-8">
@@ -31,10 +27,9 @@ const CategoryInfo = ({ officeId, categoryName, responseData }) => {
                 ) : (
                     <h4>{categoryName}</h4>
                 )}
-                {categoryData.products.map((product, index) => (
+                {categoryData.products && categoryData.products.map((product, index) => (
                     <div key={index}>
                         {product.title && <p className={styles.headline}>{product.title}</p>}
-                        {product.description && <p>{product.description}</p>}
                         {product.options && (
                             <div>
                                 {product.options.map((option, index) => (
@@ -61,19 +56,27 @@ const CategoryInfo = ({ officeId, categoryName, responseData }) => {
                                 ))}
                             </div>
                         )}
+                        {product.description && <p>{product.description}</p>}
                     </div>
                 ))}
             </div>
-            <div className={`col-md-4 ${styles.image_info}`}>
-                {categoryData.images && categoryData.images.map((image, index) => (
-                    <img key={index} className={styles.img_box} src={image} alt={categoryName} />
-                ))}
-            </div>
+            {categoryData.sideImages ? (
+                    <div className={`col-md-4 ${styles.image_info}`}>
+                        {categoryData.sideImages.map((image, index) => (
+                            <img key={index} className={styles.img_box} src={image} alt={categoryName} />
+                        ))}
+                    </div>
+                ) : null}
             {categoryName === 'Фото на документы' ? (
-                <div className="col-md-12 justify-content-center">
+                <div className={`col-md-12 ${styles.image_compare}`}>
                     <CompareImage />
                 </div>
             ) : null}
+            {categoryData.lowerImages && categoryData.lowerImages.map((image, index) => (
+                <div className="col-md-12">
+                    <img key={index} className={styles.img_box} src={image} alt={categoryName} />
+                </div>
+            ))}
         </>
     );
 };
