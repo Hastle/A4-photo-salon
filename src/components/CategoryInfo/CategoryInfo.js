@@ -36,7 +36,7 @@ const CategoryInfo = ({ officeId, categoryName, responseData }) => {
                                     <div key={index}>
                                         {Array.isArray(option.price) ? (
                                             <>
-                                                <p>{option.subtitle}</p>
+                                                <p className={option.isBold ? styles.headline : null}>{option.subtitle}</p>
                                                 {option.price.map((subOption, index) => (
                                                     <div className={styles.row_item} key={index}>
                                                         <p>{subOption.quantity}</p>
@@ -47,7 +47,7 @@ const CategoryInfo = ({ officeId, categoryName, responseData }) => {
                                             </>
                                         ) : (
                                             <div className={styles.row_item}>
-                                                <p>{option.subtitle}</p>
+                                                <p className={!categoryName ? styles.headline : null}>{option.subtitle}</p>
                                                 <span className={styles.line}></span>
                                                 <p>{option.price}</p>
                                             </div>
