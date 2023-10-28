@@ -2,7 +2,7 @@ import React from "react";
 import styles from "./styles.module.sass";
 import CompareImage from "../CompareImage/CompareImage";
 
-const CategoryInfo = ({ officeId, categoryName, responseData }) => {
+function CategoryInfo({ officeId, categoryName, responseData }) {
     const officeData = responseData.find((item) => item.id === officeId);
 
     if (!officeData) {
@@ -15,9 +15,19 @@ const CategoryInfo = ({ officeId, categoryName, responseData }) => {
         return <p>Данные для категории {categoryName} не найдены.</p>;
     }
 
-    return (
-        <>
-            <div className="col-md-8">
+    function PriceInfo({ item, price }) {
+        return (
+            <div className={styles.row_item}>
+                <p>{item}</p>
+                <span className={styles.line}></span>
+                <p>{price}</p>
+            </div>
+        );
+    }
+
+    function CategoryTitle({ categoryName }) {
+        return (
+            <>
                 {categoryData.price ? (
                     <div className={styles.row_item}>
                         <h4>{categoryName}</h4>
@@ -27,58 +37,68 @@ const CategoryInfo = ({ officeId, categoryName, responseData }) => {
                 ) : (
                     <h4>{categoryName}</h4>
                 )}
-                {categoryData.products && categoryData.products.map((product, index) => (
-                    <div key={index}>
-                        {product.title && <p className={styles.headline}>{product.title}</p>}
-                        {product.options && (
-                            <div>
-                                {product.options.map((option, index) => (
-                                    <div key={index}>
-                                        {Array.isArray(option.price) ? (
-                                            <>
-                                                <p className={option.isBold ? styles.headline : null}>{option.subtitle}</p>
-                                                {option.price.map((subOption, index) => (
-                                                    <div className={styles.row_item} key={index}>
-                                                        <p>{subOption.quantity}</p>
-                                                        <span className={styles.line}></span>
-                                                        <p>{subOption.price}</p>
-                                                    </div>
-                                                ))}
-                                            </>
-                                        ) : (
-                                            <div className={styles.row_item}>
-                                                <p className={!categoryName ? styles.headline : null}>{option.subtitle}</p>
-                                                <span className={styles.line}></span>
-                                                <p>{option.price}</p>
-                                            </div>
-                                        )}
-                                    </div>
-                                ))}
+            </>
+        );
+    }
+
+    function Product({ product, index }) {
+        return (
+            <div key={index}>
+                {product.price ? (
+                    <PriceInfo item={product.title} price={product.price}/>
+                ) : (
+                    <p className={styles.headline}>{product.title}</p>
+                )}
+                {product.options && (
+                    <div>
+                        {product.options.map((option, index) => (
+                            <div key={index}>
+                                {Array.isArray(option.price) ? (
+                                    <>
+                                        <p>{option.subtitle}</p>
+                                        {option.price.map((subOption, index) => (
+                                            <PriceInfo key={index} item={subOption.quantity} price={subOption.price} />
+                                        ))}
+                                    </>
+                                ) : (
+                                    <PriceInfo item={option.subtitle} price={option.price} />
+                                )}
                             </div>
-                        )}
-                        {product.description && <p>{product.description}</p>}
-                    </div>
-                ))}
-            </div>
-            {categoryData.sideImages ? (
-                    <div className={`col-md-4 ${styles.image_info}`}>
-                        {categoryData.sideImages.map((image, index) => (
-                            <img key={index} className={styles.img_box} src={image} alt={categoryName} />
                         ))}
                     </div>
-                ) : null}
-            {categoryName === 'Фото на документы' ? (
+                )}
+                {product.description && <p>{product.description}</p>}
+            </div>
+        );
+    }
+
+    return (
+        <>
+            <div className="col-md-8">
+                {categoryName &&(
+                    <CategoryTitle categoryName={categoryName} />
+                )}
+                {categoryData.products && categoryData.products.map((product, index) => (
+                    <Product key={index} product={product} index={index} />
+                ))}
+            </div>
+            <div className={`col-md-4 ${styles.image_info}`}>
+                {categoryData.sideImages && categoryData.sideImages.map((image, index) => (
+                    <img key={index} className={styles.img_box} src={image} alt={categoryName} />
+                ))}
+            </div>
+            {categoryData.lowerImages && categoryData.lowerImages.map((image, index) => (
+                <div key={index} className="col-md-12">
+                    <img className={styles.img_box} src={image} alt={categoryName} />
+                </div>
+            ))}
+            {categoryData.isCompareImage && (
                 <div className={`col-md-12 ${styles.image_compare}`}>
                     <CompareImage />
                 </div>
-            ) : null}
-            {categoryData.lowerImages && categoryData.lowerImages.map((image, index) => (
-                <div className="col-md-12">
-                    <img key={index} className={styles.img_box} src={image} alt={categoryName} />
-                </div>
-            ))}
+            )}
         </>
     );
-};
+}
 
 export default CategoryInfo;
