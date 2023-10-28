@@ -15,7 +15,6 @@ const officeServicesList = [
                         options: [
                             {
                                 subtitle: 'Чёрно-белая',
-                                isBold: true,
                                 price: [
                                     {
                                         quantity: 'до 20 стр.',
@@ -37,7 +36,6 @@ const officeServicesList = [
                             },
                             {
                                 subtitle: 'Цветная',
-                                isBold: true,
                                 price: [
                                     {
                                         quantity: 'до 20 стр.',
@@ -96,17 +94,13 @@ const officeServicesList = [
                 name: 'Ксерокопия',
                 products: [
                     {
-                        options: [
-                            {
-                                subtitle: 'Чёрно-белая',
-                                price: '15р'
-                            },
-                            {
-                                subtitle: 'Цветная',
-                                price: '24р'
-                            }
-                        ]
+                        title: 'Чёрно-белая',
+                        price: '15р'
                     },
+                    {
+                        title: 'Цветная',
+                        price: '24р'
+                    }
                 ],
             },
             {
@@ -117,58 +111,50 @@ const officeServicesList = [
                 name: 'Ламинация',
                 products: [
                     {
-                        options: [
-                            {
-                                subtitle: 'А6',
-                                price: '60р'
-                            },
-                            {
-                                subtitle: 'А5',
-                                price: '80р'
-                            },
-                            {
-                                subtitle: 'А4',
-                                price: '100р'
-                            },
-                            {
-                                subtitle: 'А3',
-                                price: '170р'
-                            },
-
-                        ]
+                        title: 'А6',
+                        price: '60р'
                     },
+                    {
+                        title: 'А5',
+                        price: '80р'
+                    },
+                    {
+                        title: 'А4',
+                        price: '100р'
+                    },
+                    {
+                        title: 'А3',
+                        price: '170р'
+                    },
+
                 ],
             },
             {
                 name: 'Брошюровка',
                 products: [
                     {
-                        options: [
-                            {
-                                subtitle: 'до 25 листов',
-                                price: '160р'
-                            },
-                            {
-                                subtitle: 'до 50 листов',
-                                price: '210р'
-                            },
-                            {
-                                subtitle: 'до 100 листов',
-                                price: '300р'
-                            },
-                            {
-                                subtitle: 'до 200 листов',
-                                price: '360р'
-                            },
-                            {
-                                subtitle: 'до 300 листов',
-                                price: '510р'
-                            },
-                            {
-                                subtitle: 'до 500 листов',
-                                price: '660р'
-                            },
-                        ]
+                        title: 'до 25 листов',
+                        price: '160р'
+                    },
+                    {
+                        title: 'до 50 листов',
+                        price: '210р'
+                    },
+                    {
+                        title: 'до 100 листов',
+                        price: '300р'
+                    },
+                    {
+                        title: 'до 200 листов',
+                        price: '360р'
+                    },
+                    {
+                        title: 'до 300 листов',
+                        price: '510р'
+                    },
+                    {
+                        title: 'до 500 листов',
+                        price: '660р'
                     },
                 ],
                 sideImages: [Polaroid_4],
@@ -177,28 +163,24 @@ const officeServicesList = [
                 name: 'Твердый переплет',
                 products: [
                     {
-                        options: [
-                            {
-                                subtitle: 'до 50 листов',
-                                price: '400р'
-                            },
-                            {
-                                subtitle: 'до 100 листов',
-                                price: '470р'
-                            },
-                            {
-                                subtitle: 'до 150 листов',
-                                price: '560р'
-                            },
-                            {
-                                subtitle: 'до 200 листов',
-                                price: '640р'
-                            },
-                            {
-                                subtitle: 'до 300 листов',
-                                price: '700р'
-                            },
-                        ]
+                        title: 'до 50 листов',
+                        price: '400р'
+                    },
+                    {
+                        title: 'до 100 листов',
+                        price: '470р'
+                    },
+                    {
+                        title: 'до 150 листов',
+                        price: '560р'
+                    },
+                    {
+                        title: 'до 200 листов',
+                        price: '640р'
+                    },
+                    {
+                        title: 'до 300 листов',
+                        price: '700р'
                     },
                 ],
             },
