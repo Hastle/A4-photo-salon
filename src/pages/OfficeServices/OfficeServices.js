@@ -22,8 +22,8 @@ function OfficeServices() {
                 <h3>Офисные услуги</h3>
             </div>
             {selectedOfficeData &&
-                selectedOfficeData.services.map((service) => (
-                    <CategoryInfo key={service.name} officeId={selectedOffice} categoryName={service.name} responseData={officeServices} />
+                selectedOfficeData.services.map((service, index) => (
+                    <CategoryInfo key={index} officeId={selectedOffice} categoryName={service.name} responseData={officeServices} />
                 ))
             }
         </Layout>

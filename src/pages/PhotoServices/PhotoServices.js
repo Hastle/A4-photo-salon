@@ -1,4 +1,4 @@
-import React, {useEffect, useState} from "react";
+import React, { useEffect, useState } from "react";
 import Layout from "../../components/Layout/Layout";
 import CategoryInfo from "../../components/CategoryInfo/CategoryInfo";
 import { useSelectedValue } from "../../context/SelectedValueContext";
@@ -23,8 +23,8 @@ function PhotoServices() {
                 <h3>Фотоуслуги</h3>
             </div>
             {selectedOfficeData &&
-                selectedOfficeData.services.map((service) => (
-                    <CategoryInfo key={service.name} officeId={selectedOffice} categoryName={service.name} responseData={photoServicesList} />
+                selectedOfficeData.services.map((service, index) => (
+                    <CategoryInfo key={index} officeId={selectedOffice} categoryName={service.name} responseData={photoServicesList} />
                 ))
             }
         </Layout>

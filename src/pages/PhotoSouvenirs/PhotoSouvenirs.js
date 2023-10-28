@@ -22,8 +22,8 @@ function PhotoSouvenirs() {
                 <h3>Фотосувениры</h3>
             </div>
             {selectedOfficeData &&
-                selectedOfficeData.services.map((service) => (
-                    <CategoryInfo key={service.name} officeId={selectedOffice} categoryName={service.name} responseData={photoSouvenirsList} />
+                selectedOfficeData.services.map((service, index) => (
+                    <CategoryInfo key={index} officeId={selectedOffice} categoryName={service.name} responseData={photoSouvenirsList} />
                 ))
             }
         </Layout>
