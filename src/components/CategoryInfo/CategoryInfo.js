@@ -45,10 +45,10 @@ function CategoryInfo({ officeId, categoryName, responseData }) {
         return (
             <div key={index}>
                 {product.price ? (
-                    <PriceInfo item={product.title} price={product.price}/>
-                ) : (
+                    <PriceInfo item={product.title} price={product.price} />
+                ) : product.title ? (
                     <p className={styles.headline}>{product.title}</p>
-                )}
+                ) : null}
                 {product.options && (
                     <div>
                         {product.options.map((option, index) => (
@@ -74,7 +74,7 @@ function CategoryInfo({ officeId, categoryName, responseData }) {
 
     return (
         <>
-            <div className="col-md-8">
+            <div className={`col-md-8 ${styles.category_info}`}>
                 {categoryName &&(
                     <CategoryTitle categoryName={categoryName} />
                 )}
