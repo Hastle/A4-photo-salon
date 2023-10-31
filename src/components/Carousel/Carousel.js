@@ -4,11 +4,11 @@ import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import SampleNextArrow from "./SamleNextArrow";
 import SamplePrevArrow from "./SamplePrevArrow";
-import Slide_1 from "../../assets/images/slider/slider-1.png";
-import Slide_2 from "../../assets/images/slider/slider-2.png";
-import Slide_3 from "../../assets/images/slider/slider-3.png";
-import Slide_4 from "../../assets/images/slider/slider-4.png";
-import Slide_5 from "../../assets/images/slider/slider-5.png";
+import Slide_1 from "../../../public/images/slider/slider-1.png";
+import Slide_2 from "../../../public/images/slider/slider-2.png";
+import Slide_3 from "../../../public/images/slider/slider-3.png";
+import Slide_4 from "../../../public/images/slider/slider-4.png";
+import Slide_5 from "../../../public/images/slider/slider-5.png";
 import styles from "./styles.module.sass";
 const Carousel = () => {
     const settings = {
