@@ -1,7 +1,7 @@
-import Polaroid_1 from "../assets/images/photo-souvenirs/polaroid-1.png";
-import Polaroid_2 from "../assets/images/photo-souvenirs/polaroid-2.png";
-import Polaroid_5 from "../assets/images/photo-souvenirs/polaroid-5.png";
-import Polaroid_6 from "../assets/images/photo-souvenirs/polaroid-6.png";
+import Polaroid_1 from "../../public/images/photo-souvenirs/polaroid-1.png";
+import Polaroid_2 from "../../public/images/photo-souvenirs/polaroid-2.png";
+import Polaroid_5 from "../../public/images/photo-souvenirs/polaroid-5.png";
+import Polaroid_6 from "../../public/images/photo-souvenirs/polaroid-6.png";
 
 const photoSouvenirsList = [
     {

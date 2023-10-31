@@ -1,8 +1,8 @@
-import Polaroid_1 from "../assets/images/photo-services/polaroid-1.png";
-import Polaroid_2 from "../assets/images/photo-services/polaroid-2.png";
-import Polaroid_3 from "../assets/images/photo-services/polaroid-3.png";
-import Polaroid_4 from "../assets/images/photo-services/polaroid-4.png";
-import CommonCard from "../assets/images/photo-services/common-card.png";
+import Polaroid_1 from "../../public/images/photo-services/polaroid-1.png";
+import Polaroid_2 from "../../public/images/photo-services/polaroid-2.png";
+import Polaroid_3 from "../../public/images/photo-services/polaroid-3.png";
+import Polaroid_4 from "../../public/images/photo-services/polaroid-4.png";
+import CommonCard from "../../public/images/photo-services/common-card.png";
 
 const photoServicesList = [
     {
@@ -278,7 +278,6 @@ const photoServicesList = [
                             }
                         ]
                     },
-                    // Добавьте остальные размеры и опции
                 ]
             },
             {
