@@ -1,8 +1,8 @@
 import React from 'react';
 import ReactBeforeSliderComponent from 'react-before-after-slider-component';
 import 'react-before-after-slider-component/dist/build.css';
-import Before from "../../assets/images/photo-services/compare-1.jpeg";
-import After from "../../assets/images/photo-services/compare-2.jpeg";
+import Before from "../../../public/images/photo-services/compare-1.jpeg";
+import After from "../../../public/images/photo-services/compare-2.jpeg";
 
 const firstImage = {
     imageUrl: After
