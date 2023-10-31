@@ -6,7 +6,7 @@ import styles from "./style.module.sass";
 function Layout(props) {
 
     return (
-        <div>
+        <>
             <Header/>
             <div className={`container ${styles.wrapper}`}>
                 <div className="row">
@@ -14,7 +14,7 @@ function Layout(props) {
                 </div>
             </div>
             <Footer/>
-        </div>
+        </>
     );
 }
 
