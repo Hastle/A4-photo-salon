@@ -15,12 +15,18 @@ function CategoryInfo({ officeId, categoryName, responseData }) {
         return <p>Данные для категории {categoryName} не найдены.</p>;
     }
 
-    function PriceInfo({ item, price }) {
+    function PriceInfo({ item, price, priceAddition }) {
         return (
             <div className={styles.row_item}>
                 <p>{item}</p>
                 <span className={styles.line}></span>
                 <p>{price}</p>
+                {priceAddition && (
+                    <>
+                        <span className={styles.line}></span>
+                        <p>{priceAddition}</p>
+                    </>
+                )}
             </div>
         );
     }
@@ -48,7 +54,14 @@ function CategoryInfo({ officeId, categoryName, responseData }) {
                     <PriceInfo item={product.title} price={product.price} />
                 ) : product.title ? (
                     <p className={styles.headline}>{product.title}</p>
-                ) : null}
+                ) : product.titleFirst ? (
+                    <div className={styles.column_title}>
+                        <p className={styles.headline}>{product.titleFirst}</p>
+                        <p className={styles.headline}>{product.titleSecond}</p>
+                        <p className={styles.headline}>{product.titleThird}</p>
+                    </div>
+                ) : null
+                }
                 {product.options && (
                     <div>
                         {product.options.map((option, index) => (
@@ -61,7 +74,7 @@ function CategoryInfo({ officeId, categoryName, responseData }) {
                                         ))}
                                     </>
                                 ) : (
-                                    <PriceInfo item={option.subtitle} price={option.price} />
+                                    <PriceInfo item={option.subtitle} price={option.price} priceAddition={option.priceAddition} />
                                 )}
                             </div>
                         ))}
@@ -74,19 +87,19 @@ function CategoryInfo({ officeId, categoryName, responseData }) {
 
     return (
         <>
-            <div className={`col-md-8 ${styles.category_info}`}>
-                {categoryName &&(
-                    <CategoryTitle categoryName={categoryName} />
-                )}
+            <div className={`col-md-${categoryData.isFullWidth ? '12' : '8'} ${styles.category_info}`}>
+                {categoryName && <CategoryTitle categoryName={categoryName} />}
                 {categoryData.products && categoryData.products.map((product, index) => (
                     <Product key={index} product={product} index={index} />
                 ))}
             </div>
-            <div className={`col-md-4 ${styles.image_info}`}>
-                {categoryData.sideImages && categoryData.sideImages.map((image, index) => (
-                    <img key={index} className={styles.img_box} src={image} alt={categoryName} />
-                ))}
-            </div>
+            {categoryData.sideImages && (
+                <div className={`col-md-4 ${styles.image_info}`}>
+                    {categoryData.sideImages.map((image, index) => (
+                        <img key={index} className={styles.img_box} src={image} alt={categoryName} />
+                    ))}
+                </div>
+            )}
             {categoryData.lowerImages && categoryData.lowerImages.map((image, index) => (
                 <div key={index} className="col-md-12">
                     <img className={styles.img_box} src={image} alt={categoryName} />
