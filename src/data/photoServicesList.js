@@ -240,77 +240,132 @@ const photoServicesList = [
                 name: 'Печать на холсте',
                 products: [
                     {
-                        title: '30х40 см',
+                        titleFirst: 'Размер',
+                        titleSecond: 'Без натяжки',
+                        titleThird: 'С натяжкой',
                         options: [
                             {
-                                subtitle: 'Без натяжки',
-                                price: '2230р'
+                                subtitle: '30х40 см',
+                                price: '2230р',
+                                priceAddition: '3230р'
                             },
                             {
-                                subtitle: 'С натяжкой',
-                                price: '2330р'
-                            }
-                        ]
-                    },
-                    {
-                        title: '40х40 см',
-                        options: [
-                            {
-                                subtitle: 'Без натяжки',
-                                price: '2500р'
+                                subtitle: '40х40 см',
+                                price: '2330р',
+                                priceAddition: '3470р'
                             },
                             {
-                                subtitle: 'С натяжкой',
-                                price: '2650р'
-                            }
-                        ]
-                    },
-                    {
-                        title: '40х50 см',
-                        options: [
-                            {
-                                subtitle: 'Без натяжки',
-                                price: '2700р'
+                                subtitle: '40х50 см',
+                                price: '2500р',
+                                priceAddition: '3580р'
                             },
                             {
-                                subtitle: 'С натяжкой',
-                                price: '2600р'
+                                subtitle: '40х60 см',
+                                price: '2650р',
+                                priceAddition: '3720р'
+                            },
+                            {
+                                subtitle: '40х90 см',
+                                price: '2700р',
+                                priceAddition: '3550р'
+                            },
+                            {
+                                subtitle: '50х50 см',
+                                price: '2600р',
+                                priceAddition: '3630р'
+                            },
+                            {
+                                subtitle: '50х60 см',
+                                price: '2950р',
+                                priceAddition: '3970р'
+                            },
+                            {
+                                subtitle: '50х70 см',
+                                price: '3300р',
+                                priceAddition: '4460р'
+                            },
+                            {
+                                subtitle: '60х60 см',
+                                price: '3550р',
+                                priceAddition: '4570р'
+                            },
+                            {
+                                subtitle: '60х80 см',
+                                price: '4450р',
+                                priceAddition: '5630р'
+                            },
+                            {
+                                subtitle: '70х90 см',
+                                price: '5750р',
+                                priceAddition: '7050р'
+                            },
+                            {
+                                subtitle: '70х100 см',
+                                price: '6350р',
+                                priceAddition: '7750р'
+                            },
+                            {
+                                subtitle: '100х100 см',
+                                price: '8450р',
+                                priceAddition: '10650р'
                             }
                         ]
-                    },
-                ]
+                    }
+                ],
+                isFullWidth: true,
             },
             {
                 name: 'Печать на пенокартоне',
                 products: [
                     {
-                        title: '30х40 см',
+                        titleFirst: 'Размер',
+                        titleSecond: 'Без рамки',
+                        titleThird: 'С рамкой',
                         options: [
                             {
-                                subtitle: 'Без рамки',
-                                price: '1400р'
+                                subtitle: '30х40 см',
+                                price: '1400р',
+                                priceAddition: '2380р'
                             },
                             {
-                                subtitle: 'С рамкой',
-                                price: '1550р'
-                            }
-                        ]
-                    },
-                    {
-                        title: '40х40 см',
-                        options: [
-                            {
-                                subtitle: 'Без рамки',
-                                price: '1600р'
+                                subtitle: '40х40 см',
+                                price: '1550р',
+                                priceAddition: '2640р'
                             },
                             {
-                                subtitle: 'С рамкой',
-                                price: '1750р'
-                            }
+                                subtitle: '40х50 см',
+                                price: '1600р',
+                                priceAddition: '2720р'
+                            },
+                            {
+                                subtitle: '40х60 см',
+                                price: '1750р',
+                                priceAddition: '2975р'
+                            },
+                            {
+                                subtitle: '50х60 см',
+                                price: '2100р',
+                                priceAddition: '3570р'
+                            },
+                            {
+                                subtitle: '60х80 см',
+                                price: '2200р',
+                                priceAddition: '3740р'
+                            },
+                            {
+                                subtitle: '80х100см',
+                                price: '4200р',
+                                priceAddition: '7140р'
+                            },
+                            {
+                                subtitle: '100х100 см',
+                                price: '4300р',
+                                priceAddition: '7310р'
+                            },
                         ]
-                    },
-                    // Добавьте остальные размеры и опции
-                ]
+                    }
+                ],
+                isFullWidth: true,
             },
             // Другие товары и услуги
         ],
