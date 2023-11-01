@@ -17,7 +17,7 @@ function Other() {
         setSelectedOfficeData(officeData);
     }, [selectedValue]);
     return (
-        <Layout>
+        <>
             <div className="col-md-12">
                 <h3>Другое</h3>
             </div>
@@ -26,7 +26,7 @@ function Other() {
                     <CategoryInfo key={index} officeId={selectedOffice} categoryName={service.name} responseData={otherList} />
                 ))
             }
-        </Layout>
+        </>
     );
 }
 

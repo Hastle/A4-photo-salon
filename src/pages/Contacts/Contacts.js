@@ -1,6 +1,4 @@
 import React, { useEffect, useState } from "react";
-import Layout from "../../components/Layout/Layout";
-import CategoryInfo from "../../components/CategoryInfo/CategoryInfo";
 import { useSelectedValue } from "../../context/SelectedValueContext";
 import officeList from "../../data/officeList";
 import styles from "./styles.module.sass";
@@ -16,11 +14,11 @@ function Contacts() {
 
     const selectedOfficeData = officeList.find(office => office.id === selectedOffice);
     return (
-        <Layout>
+        <>
             <div className="col-md-12">
                 <h3>Контакты</h3>
             </div>
-            <div className={`col-md-auto ${styles.main_features}`}>
+            <div className={`col-md-12 ${styles.main_features}`}>
                 <p>Адрес: {selectedOfficeData.address}</p>
                 <p>Режим работы: {selectedOfficeData.schedule}</p>
                 <p><a href={`tel:${selectedOfficeData.phone}`}>Телефон: {selectedOfficeData.phone}</a></p>
@@ -36,7 +34,7 @@ function Contacts() {
                 <p>ИНН: {selectedOfficeData.inn}</p>
                 <p>ОГРНИП: {selectedOfficeData.ogrnip}</p>
             </div>
-        </Layout>
+        </>
     );
 }
 

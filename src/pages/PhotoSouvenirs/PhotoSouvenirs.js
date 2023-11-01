@@ -1,5 +1,4 @@
 import React, {useEffect, useState} from "react";
-import Layout from "../../components/Layout/Layout";
 import {useSelectedValue} from "../../context/SelectedValueContext";
 import officeList from "../../data/officeList";
 import photoSouvenirsList from "../../data/photoSouvenirsList";
@@ -17,7 +16,7 @@ function PhotoSouvenirs() {
         setSelectedOfficeData(officeData);
     }, [selectedValue]);
     return (
-        <Layout>
+        <>
             <div className="col-md-12">
                 <h3>Фотосувениры</h3>
             </div>
@@ -26,7 +25,7 @@ function PhotoSouvenirs() {
                     <CategoryInfo key={index} officeId={selectedOffice} categoryName={service.name} responseData={photoSouvenirsList} />
                 ))
             }
-        </Layout>
+        </>
     );
 }
 

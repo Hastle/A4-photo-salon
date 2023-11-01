@@ -1,11 +1,10 @@
 import React from 'react';
-import Layout from "../../components/Layout/Layout";
 import styles from "./styles.module.sass";
 import Carousel from "../../components/Carousel/Carousel";
 
 function Main() {
     return (
-        <Layout>
+        <>
             <div className={`col-md-5 ${styles.main_features}`}>
                 <h1>Ваш любимый фотосалон рядом с домом</h1>
                 <p>Широкий спектр услуг</p>
@@ -15,7 +14,7 @@ function Main() {
             <div className="col-md-7">
                 <Carousel />
             </div>
-        </Layout>
+        </>
     );
 }
 
