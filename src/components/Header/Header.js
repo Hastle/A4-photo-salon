@@ -1,6 +1,6 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import { NavLink } from "react-router-dom";
-import { MdLocationOn } from "react-icons/md";
+import { MdLocationOn, MdMenu } from "react-icons/md";
 import Logotype from "../Logotype/Logotype";
 import officeList from "../../data/officeList";
 import { useSelectedValue } from "../../context/SelectedValueContext";
@@ -8,6 +8,8 @@ import styles from "./styles.module.sass";
 
 function Header() {
     const { selectedValue, setSelectedValue } = useSelectedValue();
+    const [isMenuOpen, setIsMenuOpen] = useState(false);
+
     const handleSelectChange = (event) => {
         const newValue = event.target.value;
         setSelectedValue(parseInt(newValue, 10));
@@ -24,11 +26,20 @@ function Header() {
         localStorage.setItem("selectedOfficeId", JSON.stringify(selectedValue));
     }, [selectedValue]);
 
+    const toggleMenu = () => {
+        setIsMenuOpen(!isMenuOpen);
+    };
+
     return (
         <header className={styles.header}>
             <div className={styles.main_menu}>
-                <Logotype />
-                <nav className={styles.top_navigation}>
+                <div className={styles.navigation_layer}>
+                    <Logotype />
+                    <button className={styles.menu_btn} onClick={toggleMenu}>
+                        <MdMenu />
+                    </button>
+                </div>
+                <nav className={isMenuOpen ?  styles.top_navigation_active : styles.top_navigation}>
                     <NavLink className={styles.menu_item} to="/photo-services">
                         Фотоуслуги
                     </NavLink>
