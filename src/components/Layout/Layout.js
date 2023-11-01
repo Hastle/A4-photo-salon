@@ -1,19 +1,19 @@
 import React from "react";
+import { Outlet } from "react-router-dom";
 import Header from "../Header/Header";
 import Footer from "../Footer/Footer";
 import styles from "./style.module.sass";
 
-function Layout(props) {
-
+function Layout() {
     return (
         <>
-            <Header/>
+            <Header />
             <div className={`container ${styles.wrapper}`}>
                 <div className="row">
-                    {props.children}
+                    <Outlet />
                 </div>
             </div>
-            <Footer/>
+            <Footer />
         </>
     );
 }
