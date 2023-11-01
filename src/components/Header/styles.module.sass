@@ -35,3 +35,48 @@
 			cursor: pointer
 	.icon
 		height: 23px
+.menu_btn
+	display: none
+/*==========  Media query  ==========*/
+@media only screen and (max-width : 1400px)
+	.menu_item
+		font-size: 16px
+		padding: .5rem .75rem
+		select
+			font-size: 16px
+@media only screen and (max-width : 1200px)
+	.header
+		min-height: auto
+		align-items: initial
+		justify-content: initial
+		background-color: $light-yellow
+	.main_menu
+		width: 100%
+	.menu_btn
+		display: flex
+		align-items: center
+		padding: 15px
+		font-size: 30px
+	.top_navigation
+		display: none
+		+flow
+		&_active
+			display: flex
+			border-top: 2px solid $dark-grey
+			position: relative
+			flex-direction: column
+			width: 100%
+			+flow
+	.main_menu
+		display: block
+	.navigation_layer
+		display: flex
+		align-items: center
+		justify-content: space-between
+@media only screen and (max-width : 992px)
+
+@media only screen and (max-width : 768px)
+
+@media only screen and (max-width : 480px)
+
+@media only screen and (max-width : 320px)
