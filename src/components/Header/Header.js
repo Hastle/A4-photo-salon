@@ -10,11 +10,6 @@ function Header() {
     const { selectedValue, setSelectedValue } = useSelectedValue();
     const [isMenuOpen, setIsMenuOpen] = useState(false);
 
-    const handleSelectChange = (event) => {
-        const newValue = event.target.value;
-        setSelectedValue(parseInt(newValue, 10));
-    };
-
     useEffect(() => {
         const savedValue = localStorage.getItem("selectedOfficeId");
         if (savedValue) {
@@ -30,6 +25,16 @@ function Header() {
         setIsMenuOpen(!isMenuOpen);
     };
 
+    const closeMenu = () => {
+        setIsMenuOpen(false);
+    };
+
+    const handleSelectChange = (event) => {
+        const newValue = event.target.value;
+        setSelectedValue(parseInt(newValue, 10));
+        closeMenu();
+    };
+
     return (
         <header className={styles.header}>
             <div className={styles.main_menu}>
@@ -39,30 +44,30 @@ function Header() {
                         <MdMenu />
                     </button>
                 </div>
-                <nav className={isMenuOpen ?  styles.top_navigation_active : styles.top_navigation}>
-                    <NavLink className={styles.menu_item} to="/photo-services">
+                <nav className={isMenuOpen ? styles.top_navigation_active : styles.top_navigation}>
+                    <NavLink className={styles.menu_item} to="/photo-services" onClick={closeMenu}>
                         Фотоуслуги
                     </NavLink>
-                    <NavLink className={styles.menu_item} to="/photo-souvenirs">
+                    <NavLink className={styles.menu_item} to="/photo-souvenirs" onClick={closeMenu}>
                         Фотосувениры
                     </NavLink>
-                    <NavLink className={styles.menu_item} to="/office-services">
+                    <NavLink className={styles.menu_item} to="/office-services" onClick={closeMenu}>
                         Офисные услуги
                     </NavLink>
-                    <NavLink className={styles.menu_item} to="/other">
+                    <NavLink className={styles.menu_item} to="/other" onClick={closeMenu}>
                         Другое
                     </NavLink>
-                    <NavLink className={styles.menu_item} to="/order">
+                    <NavLink className={styles.menu_item} to="/order" onClick={closeMenu}>
                         Заказ
                     </NavLink>
-                    <NavLink className={styles.menu_item} to="/contacts">
+                    <NavLink className={styles.menu_item} to="/contacts" onClick={closeMenu}>
                         Контакты
                     </NavLink>
                     <div className={styles.menu_item}>
                         <MdLocationOn className={styles.icon} />
                         <select
                             name="address-current"
-                            value={selectedValue}
+                            value={selectedValue.id}
                             onChange={handleSelectChange}
                         >
                             {officeList.map((office) => (
