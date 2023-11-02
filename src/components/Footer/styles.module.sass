@@ -6,6 +6,7 @@ footer
 	align-items: center
 	position: relative
 	bottom: 0
+	padding: 20px 0
 	min-height: $header-height
 	width: 100%
 	background-color: $light-grey
@@ -21,9 +22,31 @@ footer
 .copyright, .contacts
 	padding: 0 25px
 	p
+		display: flex
 		text-align: left
 		margin: 0
 		font-size: 18px
 		+bold
 .copyright
 	margin-left: 30px
+/*==========  Media query  ==========*/
+@media only screen and (max-width : 1400px)
+
+@media only screen and (max-width : 1200px)
+	.footer_info
+		flex-direction: column
+		width: 100%
+		align-items: center
+	.copyright, .contacts
+		padding: 10px 0
+	.copyright
+		margin-left: 0
+@media only screen and (max-width : 992px)
+
+@media only screen and (max-width : 768px)
+	.copyright, .contacts
+		p
+			font-size: 16px
+@media only screen and (max-width : 480px)
+
+@media only screen and (max-width : 320px)
