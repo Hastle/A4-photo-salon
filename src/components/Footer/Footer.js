@@ -19,6 +19,7 @@ function Footer() {
                 <Logotype />
                 <div className={styles.footer_info}>
                     <div className={styles.contacts}>
+                        <p>{selectedOffice ? selectedOffice.address : officeList[0].address}</p>
                         <p><a href={`tel:${selectedOffice ? selectedOffice.phone : officeList[0].phone}`}>Телефон: {selectedOffice ? selectedOffice.phone : officeList[0].phone}</a></p>
                     </div>
                     <div className={styles.copyright}>
