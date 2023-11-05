@@ -1,9 +1,12 @@
 import React, { useEffect, useState } from "react";
 import { NavLink } from "react-router-dom";
-import { MdLocationOn, MdMenu } from "react-icons/md";
+import { MdLocationOn } from "react-icons/md";
 import Logotype from "../Logotype/Logotype";
 import officeList from "../../data/officeList";
 import { useSelectedValue } from "../../context/SelectedValueContext";
+import Burger from '@animated-burgers/burger-squeeze';
+import '@animated-burgers/burger-squeeze/dist/styles.css';
+import "./burger.sass";
 import styles from "./styles.module.sass";
 
 function Header() {
@@ -39,10 +42,8 @@ function Header() {
         <header className={styles.header}>
             <div className={styles.main_menu}>
                 <div className={styles.navigation_layer}>
-                    <Logotype />
-                    <button className={styles.menu_btn} onClick={toggleMenu}>
-                        <MdMenu />
-                    </button>
+                    <Logotype onClick={closeMenu}/>
+                    <Burger onClick={toggleMenu} isOpen={isMenuOpen} Component="button" type="button" />
                 </div>
                 <nav className={isMenuOpen ? styles.top_navigation_active : styles.top_navigation}>
                     <NavLink className={styles.menu_item} to="/photo-services" onClick={closeMenu}>
