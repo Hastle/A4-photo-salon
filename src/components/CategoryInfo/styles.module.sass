@@ -21,8 +21,9 @@ p, h4
 	display: flex
 	justify-content: space-between
 	align-items: baseline
-	h4, p
+	p, h4
 		white-space: nowrap
+		overflow-wrap: break-word
 .headline
 	+bold
 .line
@@ -33,3 +34,22 @@ p, h4
 	background: $black
 .img_box
 	padding: 20px 0
+/*==========  Media query  ==========*/
+@media only screen and (max-width : 1400px)
+
+@media only screen and (max-width : 1200px)
+
+@media only screen and (max-width : 992px)
+	.line
+		width: auto //optional
+	.row_item
+		p, h4
+			white-space: normal
+			overflow-wrap: normal
+		p
+			max-width: 300px
+@media only screen and (max-width : 768px)
+
+@media only screen and (max-width : 480px)
+
+@media only screen and (max-width : 320px)
