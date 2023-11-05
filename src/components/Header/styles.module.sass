@@ -35,8 +35,6 @@
 			cursor: pointer
 	.icon
 		height: 23px
-.menu_btn
-	display: none
 /*==========  Media query  ==========*/
 @media only screen and (max-width : 1400px)
 	.menu_item
@@ -46,31 +44,46 @@
 		min-height: auto
 		align-items: initial
 		justify-content: initial
-		background-color: $light-yellow
 	.main_menu
 		width: 100%
-	.menu_btn
-		display: flex
-		align-items: center
-		padding: 15px
-		font-size: 30px
 	.top_navigation
-		display: none
+		position: absolute
+		z-index: 100
+		background-color: $light-yellow
+		top: -200%
+		align-items: center
+		flex-wrap: wrap
+		height: auto
+		width: 100%
+		display: flex
+		flex-direction: column
+		border-top: 2px solid $border
+		border-bottom: 2px solid $border
 		+flow
 		&_active
-			display: flex
-			border-top: 2px solid $dark-grey
-			border-bottom: 2px solid $dark-grey
-			position: relative
-			flex-direction: column
+			position: absolute
+			z-index: 200
+			background-color: $light-yellow
+			top: 100%
+			align-items: center
+			flex-wrap: wrap
+			height: auto
 			width: 100%
+			display: flex
+			flex-direction: column
+			border-top: 2px solid $border
+			border-bottom: 2px solid $border
 			+flow
 	.main_menu
 		display: block
+		position: relative
 	.navigation_layer
 		display: flex
 		align-items: center
 		justify-content: space-between
+		position: relative
+		z-index: 200
+		background-color: $light-yellow
 @media only screen and (max-width : 992px)
 
 @media only screen and (max-width : 768px)
