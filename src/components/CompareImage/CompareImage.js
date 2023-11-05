@@ -1,6 +1,6 @@
-import React from 'react';
-import ReactBeforeSliderComponent from 'react-before-after-slider-component';
-import 'react-before-after-slider-component/dist/build.css';
+import React from "react";
+import ReactBeforeSliderComponent from "react-before-after-slider-component";
+import "react-before-after-slider-component/dist/build.css";
 import Before from "../../../public/images/photo-services/compare-1.jpeg";
 import After from "../../../public/images/photo-services/compare-2.jpeg";
 
