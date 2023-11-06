@@ -187,6 +187,141 @@ const officeServicesList = [
             // Другие товары и услуги
         ],
     },
+    {
+        id: 2,
+        services: [
+            {
+                name: 'Распечатка',
+                products: [
+                    {
+                        title: 'Формат А4',
+                        options: [
+                            {
+                                subtitle: 'Чёрно-белая',
+                                price: [
+                                    {
+                                        quantity: 'до 10 стр.',
+                                        price: '12р'
+                                    },
+                                    {
+                                        quantity: 'от 11 стр.',
+                                        price: '10р'
+                                    },
+                                    {
+                                        quantity: 'от 51 стр.',
+                                        price: '8р'
+                                    },
+                                    {
+                                        quantity: 'больше 101 стр.',
+                                        price: '6р'
+                                    },
+                                ]
+                            },
+                            {
+                                subtitle: 'Цветная',
+                                price: [
+                                    {
+                                        quantity: 'до 10 стр.',
+                                        price: '18р'
+                                    },
+                                    {
+                                        quantity: 'от 11 стр.',
+                                        price: '16р'
+                                    },
+                                    {
+                                        quantity: 'от 51 стр.',
+                                        price: '14р'
+                                    },
+                                    {
+                                        quantity: 'больше 101 стр.',
+                                        price: '12р'
+                                    },
+                                ]
+                            }
+                        ],
+                    },
+                    {
+                        title: 'Формат А3',
+                        price: '60р',
+                        isBold: true,
+                    },
+                    {
+                        title: 'Формат А2',
+                        price: '280р',
+                        isBold: true,
+                    },
+                    {
+                        title: 'Формат А1',
+                        price: '320р',
+                        isBold: true,
+                    },
+                ],
+                sideImages: [Polaroid_1, Polaroid_2],
+            },
+            {
+                name: 'Ксерокопия',
+                products: [
+                    {
+                        title: 'Чёрно-белая',
+                        price: '12р'
+                    },
+                    {
+                        title: 'Цветная',
+                        price: '18р'
+                    }
+                ],
+            },
+            {
+                name: 'Сканирование',
+                price: '20р'
+            },
+            {
+                name: 'Ламинация',
+                products: [
+                    {
+                        title: 'А6',
+                        price: '40р'
+                    },
+                    {
+                        title: 'А5',
+                        price: '50р'
+                    },
+                    {
+                        title: 'А4',
+                        price: '70р'
+                    },
+                    {
+                        title: 'А3',
+                        price: '100р'
+                    },
+
+                ],
+                sideImages: [Polaroid_3],
+            },
+            {
+                name: 'Брошюровка',
+                products: [
+                    {
+                        title: 'до 25 листов',
+                        price: '120р'
+                    },
+                    {
+                        title: 'до 50 листов',
+                        price: '180р'
+                    },
+                    {
+                        title: 'до 100 листов',
+                        price: '240р'
+                    },
+                    {
+                        title: 'от 100 листов',
+                        price: '300р'
+                    },
+                ],
+                sideImages: [Polaroid_4],
+            },
+        ],
+    },
     // Другие объекты для других id могут быть добавлены здесь, если необходимо.
 ];
 

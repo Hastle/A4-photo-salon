@@ -171,55 +171,68 @@ const photoSouvenirsList = [
                             {
                                 subtitle: 'Шоппер',
                                 price: 'от 950р',
+                                isBold: true,
                             },
                             {
                                 subtitle: 'Магнит акриловый',
                                 price: 'от 170р',
+                                isBold: true,
                             },
                             {
                                 subtitle: 'Магнит виниловый',
                                 price: 'от 200р',
+                                isBold: true,
                             },
                             {
                                 subtitle: 'Брелок акриловый',
                                 price: '190р',
+                                isBold: true,
                             },
                             {
                                 subtitle: 'Брелок металлический',
                                 price: 'от 400р',
+                                isBold: true,
                             },
                             {
                                 subtitle: 'Брелок с кабелем для зарядки',
                                 price: '870р',
+                                isBold: true,
                             },
                             {
                                 subtitle: 'Коврик для мышки',
                                 price: '850р',
+                                isBold: true,
                                 sideImages: [Polaroid_5],
                             },
                             {
                                 subtitle: 'Обложка на автодокументы',
                                 price: '1200р',
+                                isBold: true,
                             },
                             {
                                 subtitle: 'Чехол на iPhone',
                                 price: 'от 150р',
+                                isBold: true,
                             },
                             {
                                 subtitle: 'Фотокамень',
                                 price: '950р',
+                                isBold: true,
                             },
                             {
                                 subtitle: 'Брелок гос. номер',
                                 price: '400р',
+                                isBold: true,
                             },
                             {
                                 subtitle: 'Ручка',
                                 price: '120р',
+                                isBold: true,
                             },
                             {
                                 subtitle: 'Линейка',
                                 price: '270р',
+                                isBold: true,
                             },
                         ]
                     }
@@ -229,6 +242,167 @@ const photoSouvenirsList = [
             // Другие товары и услуги
         ],
     },
+    {
+        id: 2,
+        services: [
+            {
+                name: 'Кружки',
+                products: [
+                    {
+                        title: 'Кружка белая снаружи',
+                        price: '650р'
+                    },
+                    {
+                        title: 'Кружка-хамелеон',
+                        price: '750р'
+                    },
+                    {
+                        title: 'Кружка с ложкой',
+                        price: '850р'
+                    },
+                    {
+                        title: 'Кружка матовая/стеклянная',
+                        price: '650р'
+                    },
+                    {
+                        title: 'Бутылка металлическая',
+                        price: '850р'
+                    },
+                    {
+                        title: 'Кружка пивная',
+                        price: '1100р'
+                    },
+                    {
+                        title: 'Кружка карабин',
+                        price: '1100р'
+                    },
+                    {
+                        title: 'Парные кружки',
+                        price: '1100р'
+                    },
+                    {
+                        description: 'Доступны кружки с внутренней заливкой (жёлтые, оранжевые, красные, бордовые, черные, синие, голубые, мятные, розовые, лавандовые, бежевые, салатовые, бирюзовые). Наличие уточняйте у сотрудников'
+                    },
+                ],
+                sideImages: [Polaroid_1],
+            },
+            {
+                name: 'Футболки и толстовки',
+                products: [
+                    {
+                        title: 'Футболка белая (с одной стороны)',
+                        price: '1000р'
+                    },
+                    {
+                        title: 'Печать на черной/цветной футболке',
+                        price: 'от 800р'
+                    },
+                    {
+                        title: 'Печать на своей белой футболке',
+                        price: '600р'
+                    },
+                    {
+                        title: 'Дополнительный отпечаток',
+                        price: '200р'
+                    },
+                ],
+                sideImages: [Polaroid_2],
+            },
+            {
+                name: 'Пазлы',
+                products: [
+                    {
+                        title: 'Пазл 13х18',
+                        price: '450р'
+                    },
+                    {
+                        title: 'Пазл А4',
+                        price: '700р'
+                    },
+                ]
+            },
+            {
+                products: [
+                    {
+                        options: [
+                            {
+                                subtitle: 'Подушки',
+                                price: 'от 1100р',
+                                isBold: true,
+                            },
+                            {
+                                subtitle: 'Шоппер',
+                                price: 'от 700р',
+                                isBold: true,
+                            },
+                            {
+                                subtitle: 'Часы',
+                                price: 'от 1500р',
+                                isBold: true,
+                            },
+                            {
+                                subtitle: 'Магнит акриловый',
+                                price: '200р',
+                                isBold: true,
+                            },
+                            {
+                                subtitle: 'Магнит металлический',
+                                price: '400р',
+                                isBold: true,
+                            },
+                            {
+                                subtitle: 'Магнит виниловый',
+                                price: 'от 200р',
+                                isBold: true,
+                            },
+                            {
+                                subtitle: 'Брелок акриловый',
+                                price: '150р',
+                                isBold: true,
+                            },
+                            {
+                                subtitle: 'Брелок металлический',
+                                price: '400р',
+                                isBold: true,
+                            },
+                            {
+                                subtitle: 'Коврик для мышки',
+                                price: '600р',
+                                isBold: true,
+                                sideImages: [Polaroid_5],
+                            },
+                            {
+                                subtitle: 'Обложка на автодокументы',
+                                price: '1200р',
+                                isBold: true,
+                            },
+                            {
+                                subtitle: 'Чехол на iPhone',
+                                price: 'от 150р',
+                                isBold: true,
+                            },
+                            {
+                                subtitle: 'Фотокамень',
+                                price: '1100р',
+                                isBold: true,
+                            },
+                            {
+                                subtitle: 'Брелок гос. номер',
+                                price: '400р',
+                                isBold: true,
+                            },
+                            {
+                                subtitle: 'Медали',
+                                price: '750р',
+                                isBold: true,
+                            },
+                        ]
+                    }
+                ],
+                sideImages: [Polaroid_5],
+            }
+        ],
+    }
     // Другие объекты для других id могут быть добавлены здесь, если необходимо.
 ];
 
