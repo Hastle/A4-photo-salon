@@ -15,10 +15,10 @@ function CategoryInfo({ officeId, categoryName, responseData }) {
         return <p>Данные для категории {categoryName} не найдены.</p>;
     }
 
-    function PriceInfo({ item, price, priceAddition }) {
+    function PriceInfo({ item, price, className, priceAddition }) {
         return (
             <div className={styles.row_item}>
-                <p>{item}</p>
+                <p className={className}>{item}</p>
                 <span className={styles.line}></span>
                 <p>{price}</p>
                 {priceAddition && (
@@ -51,14 +51,14 @@ function CategoryInfo({ officeId, categoryName, responseData }) {
         return (
             <div key={index}>
                 {product.price ? (
-                    <PriceInfo item={product.title} price={product.price} />
+                    <PriceInfo item={product.title} price={product.price} className={product.isBold ? styles.headline : null} />
                 ) : product.title ? (
                     <p className={styles.headline}>{product.title}</p>
                 ) : product.titleFirst ? (
                     <div className={styles.column_title}>
-                        <p className={styles.headline}>{product.titleFirst}</p>
-                        <p className={styles.headline}>{product.titleSecond}</p>
-                        <p className={styles.headline}>{product.titleThird}</p>
+                        <p>{product.titleFirst}</p>
+                        <p>{product.titleSecond}</p>
+                        <p>{product.titleThird}</p>
                     </div>
                 ) : null
                 }
@@ -74,7 +74,7 @@ function CategoryInfo({ officeId, categoryName, responseData }) {
                                         ))}
                                     </>
                                 ) : (
-                                    <PriceInfo item={option.subtitle} price={option.price} priceAddition={option.priceAddition} />
+                                    <PriceInfo item={option.subtitle} price={option.price} priceAddition={option.priceAddition} className={option.isBold ? styles.headline : null} />
                                 )}
                             </div>
                         ))}
