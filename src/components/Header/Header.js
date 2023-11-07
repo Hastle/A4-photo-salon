@@ -68,7 +68,7 @@ function Header() {
                         <MdLocationOn className={styles.icon} />
                         <select
                             name="address-current"
-                            value={selectedValue.id}
+                            value={selectedValue}
                             onChange={handleSelectChange}
                         >
                             {officeList.map((office) => (
