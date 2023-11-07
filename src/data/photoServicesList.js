@@ -353,7 +353,7 @@ const photoServicesList = [
                                 priceAddition: '3740р'
                             },
                             {
-                                subtitle: '80х100см',
+                                subtitle: '80х100 см',
                                 price: '4200р',
                                 priceAddition: '7140р'
                             },
@@ -726,7 +726,7 @@ const photoServicesList = [
                                 priceAddition: '3740р'
                             },
                             {
-                                subtitle: '80х100см',
+                                subtitle: '80х100 см',
                                 price: '4200р',
                                 priceAddition: '7140р'
                             },
@@ -739,6 +739,290 @@ const photoServicesList = [
                     }
                 ],
                 isFullWidth: true,
+            },
+            // Другие товары и услуги
+        ],
+    },
+    {
+        id: 3,
+        services: [
+            {
+                name: 'Фотопечать на матовой или глянцевой фотобумаге',
+                products: [
+                    {
+                        title: '10х15',
+                        options: [
+                            {
+                                subtitle: 'Срочно',
+                                price: '30р'
+                            },
+                            {
+                                subtitle: 'Не срочно',
+                                price: [
+                                    {
+                                        quantity: 'до 100 шт.',
+                                        price: '15р'
+                                    },
+                                    {
+                                        quantity: 'от 100 шт.',
+                                        price: '13р'
+                                    },
+                                    {
+                                        quantity: 'от 500 шт.',
+                                        price: '11р'
+                                    },
+                                    {
+                                        quantity: 'с почты или WhatsApp',
+                                        price: '20р'
+                                    }
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        title: '13х18',
+                        options: [
+                            {
+                                subtitle: 'Срочно',
+                                price: '40р'
+                            },
+                            {
+                                subtitle: 'Не срочно',
+                                price: '35р'
+                            }
+                        ]
+                    },
+                    {
+                        title: '15х21 (с полями 3мм)',
+                        options: [
+                            {
+                                subtitle: 'Срочно',
+                                price: '40р'
+                            },
+                            {
+                                subtitle: 'Не срочно',
+                                price: '35р'
+                            }
+                        ]
+                    },
+                    {
+                        title: '21х30',
+                        options: [
+                            {
+                                subtitle: 'Срочно (глянцевая)',
+                                price: '120р'
+                            },
+                            {
+                                subtitle: 'Срочно (матовая)',
+                                price: '150р'
+                            },
+                            {
+                                subtitle: 'Не срочно',
+                                price: '100р'
+                            }
+                        ]
+                    },
+                    {
+                        title: '30х40',
+                        price: '275р',
+                        isBold: true
+                    },
+                    {
+                        title: 'Печать на самоклеющейся бумаге',
+                        price: '200р',
+                    },
+                ],
+                sideImages: [Polaroid_1, Polaroid_2, Polaroid_3],
+            },
+            {
+                name: 'Фото на документы',
+                products: [
+                    {
+                        description: 'В стоимость услуги входит: съемка, базовая ретушь, печать фотографий. Вы также можете получить электронный вариант фотографии на почту бесплатно.'
+                    },
+                    {
+                        title: 'Фото на документы',
+                        price: 'от 300р'
+                    },
+                    {
+                        title: 'Дополнительный блок фотографий',
+                        price: '100р'
+                    },
+                    {
+                        title: 'Подстановка формы и знаков отличия',
+                        price: '150р'
+                    },
+                    {
+                        title: 'Фото Green Card',
+                        price: '550р'
+                    }
+                ],
+                isCompareImage: true,
+            },
+            {
+                name: 'Реставрация, дизайн и ретушь',
+                price: 'от 500р',
+                products: [
+                    {
+                        description: 'Реставрация — это восстановление поврежденной фотографии. Комплекс действий для каждого кадра индивидуальный, в результате чего и формируется стоимость услуги.',
+                    },
+                    {
+                        description: 'Дизайн — это разработка уникального материала, который впоследствии отправляется в печать. Обрщаем Ваше внимание, что мы занимаемся разработкой дизайн-макетов только для печати на бумаге и сувенирной продукции.',
+                    },
+                    {
+                        description: 'Ретушь — это обработка фотографии с целью улучшения и исправления внешнего вида кадра.',
+                    },
+                ],
+                lowerImages: [CommonCard],
+            },
+            {
+                name: 'Печать на холсте',
+                products: [
+                    {
+                        titleFirst: 'Размер',
+                        titleSecond: 'Без натяжки',
+                        titleThird: 'С натяжкой',
+                        options: [
+                            {
+                                subtitle: '30х40 см',
+                                price: '2230р',
+                                priceAddition: '3230р'
+                            },
+                            {
+                                subtitle: '40х40 см',
+                                price: '2330р',
+                                priceAddition: '3470р'
+                            },
+                            {
+                                subtitle: '40х50 см',
+                                price: '2500р',
+                                priceAddition: '3580р'
+                            },
+                            {
+                                subtitle: '40х60 см',
+                                price: '2650р',
+                                priceAddition: '3720р'
+                            },
+                            {
+                                subtitle: '40х90 см',
+                                price: '2700р',
+                                priceAddition: '3550р'
+                            },
+                            {
+                                subtitle: '50х50 см',
+                                price: '2600р',
+                                priceAddition: '3630р'
+                            },
+                            {
+                                subtitle: '50х60 см',
+                                price: '2950р',
+                                priceAddition: '3970р'
+                            },
+                            {
+                                subtitle: '50х70 см',
+                                price: '3300р',
+                                priceAddition: '4460р'
+                            },
+                            {
+                                subtitle: '60х60 см',
+                                price: '3550р',
+                                priceAddition: '4570р'
+                            },
+                            {
+                                subtitle: '60х80 см',
+                                price: '4450р',
+                                priceAddition: '5630р'
+                            },
+                            {
+                                subtitle: '70х90 см',
+                                price: '5750р',
+                                priceAddition: '7050р'
+                            },
+                            {
+                                subtitle: '70х100 см',
+                                price: '6350р',
+                                priceAddition: '7750р'
+                            },
+                            {
+                                subtitle: '100х100 см',
+                                price: '8450р',
+                                priceAddition: '10650р'
+                            }
+                        ]
+                    }
+                ],
+                isFullWidth: true,
+            },
+            {
+                name: 'Алмазная мозаика',
+                products: [
+                    {
+                        titleFirst: 'Размер',
+                        titleSecond: 'Стоимость',
+                        options: [
+                            {
+                                subtitle: '30х40 см',
+                                price: '4580р',
+                            },
+                            {
+                                subtitle: '40х40 см',
+                                price: '4980р',
+                            },
+                            {
+                                subtitle: '40х50 см',
+                                price: '5180р',
+                            },
+                            {
+                                subtitle: '40х60 см',
+                                price: '5580р',
+                            },
+                            {
+                                subtitle: '50х50 см',
+                                price: '5780р',
+                            },
+                            {
+                                subtitle: '50х60 см',
+                                price: '6180р',
+                            },
+                            {
+                                subtitle: '50х70 см',
+                                price: '6580р',
+                            },
+                            {
+                                subtitle: '60х60 см',
+                                price: '6780р',
+                            },
+                            {
+                                subtitle: '60х70 см',
+                                price: '6980р',
+                            },
+                            {
+                                subtitle: '60х80 см',
+                                price: '7380р',
+                            },
+                            {
+                                subtitle: '70х70 см',
+                                price: '7580р',
+                            },
+                            {
+                                subtitle: '70х80 см',
+                                price: '8000р',
+                            },
+                            {
+                                subtitle: '80х80 см',
+                                price: '8400р',
+                            },
+                            {
+                                subtitle: '80х100 см',
+                                price: '9600р',
+                            },
+                            {
+                                subtitle: '80х120 см',
+                                price: '10400р',
+                            },
+                        ]
+                    }
+                ],
             },
             // Другие товары и услуги
         ],
