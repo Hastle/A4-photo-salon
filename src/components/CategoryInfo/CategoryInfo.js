@@ -56,9 +56,15 @@ function CategoryInfo({ officeId, categoryName, responseData }) {
                     <p className={styles.headline}>{product.title}</p>
                 ) : product.titleFirst ? (
                     <div className={styles.column_title}>
-                        <p>{product.titleFirst}</p>
-                        <p>{product.titleSecond}</p>
-                        <p>{product.titleThird}</p>
+                        {[
+                            product.titleFirst,
+                            product.titleSecond,
+                            product.titleThird
+                        ]
+                            .filter(title => title)
+                            .map((title, index) => (
+                                <p key={index}>{title}</p>
+                            ))}
                     </div>
                 ) : null
                 }
