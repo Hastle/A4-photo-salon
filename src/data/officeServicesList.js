@@ -458,6 +458,278 @@ const officeServicesList = [
             // Другие товары и услуги
         ],
     },
+    {
+        id: 4,
+        services: [
+            {
+                name: 'Распечатка',
+                products: [
+                    {
+                        title: 'Формат А4',
+                        options: [
+                            {
+                                subtitle: 'Чёрно-белая',
+                                price: [
+                                    {
+                                        quantity: 'до 20 стр.',
+                                        price: '20р'
+                                    },
+                                    {
+                                        quantity: 'от 21 до 50 стр.',
+                                        price: '15р'
+                                    },
+                                    {
+                                        quantity: 'больше 100 стр.',
+                                        price: '10р'
+                                    },
+                                ]
+                            },
+                            {
+                                subtitle: 'Цветная',
+                                price: [
+                                    {
+                                        quantity: 'до 10 стр.',
+                                        price: '40р'
+                                    },
+                                    {
+                                        quantity: 'от 10 стр.',
+                                        price: '35р'
+                                    },
+                                    {
+                                        quantity: 'от 50 стр.',
+                                        price: '30р'
+                                    },
+                                ]
+                            }
+                        ],
+                    },
+                ],
+                sideImages: [Polaroid_1],
+            },
+            {
+                name: 'Ксерокопия',
+                products: [
+                    {
+                        options: [
+                            {
+                                subtitle: 'Чёрно-белая',
+                                price: [
+                                    {
+                                        quantity: 'до 20 стр.',
+                                        price: '15р'
+                                    },
+                                    {
+                                        quantity: 'от 21 стр.',
+                                        price: '10р'
+                                    },
+                                ]
+                            },
+                            {
+                                subtitle: 'Цветная',
+                                price: '40р'
+                            }
+                        ]
+                    }
+                ],
+            },
+            {
+                name: 'Ламинация',
+                products: [
+                    {
+                        title: 'А6',
+                        price: '80р'
+                    },
+                    {
+                        title: 'А5',
+                        price: '100р'
+                    },
+                    {
+                        title: 'А4',
+                        price: '150р'
+                    },
+                    {
+                        title: 'А3',
+                        price: '250р'
+                    },
+
+                ],
+                sideImages: [Polaroid_3],
+            },
+            {
+                name: 'Брошюровка',
+                products: [
+                    {
+                        title: 'Формат А4',
+                        options: [
+                            {
+                                subtitle: 'до 50 листов',
+                                price: '200р'
+                            },
+                            {
+                                subtitle: 'до 100 листов',
+                                price: '300р'
+                            },
+                            {
+                                subtitle: 'до 200 листов',
+                                price: '400р'
+                            },
+                            {
+                                subtitle: 'до 300 листов',
+                                price: '500р'
+                            },
+                        ],
+                    },
+                    {
+                        title: 'Формат А3',
+                        options: [
+                            {
+                                subtitle: 'до 50 листов',
+                                price: '500р'
+                            },
+                        ],
+                    },
+                ],
+                sideImages: [Polaroid_4],
+            },
+            // Другие товары и услуги
+        ],
+    },
+    {
+        id: 5,
+        services: [
+            {
+                name: 'Распечатка',
+                products: [
+                    {
+                        title: 'Формат А4',
+                        options: [
+                            {
+                                subtitle: 'Чёрно-белая',
+                                price: [
+                                    {
+                                        quantity: 'до 20 стр.',
+                                        price: '20р'
+                                    },
+                                    {
+                                        quantity: 'от 21 до 50 стр.',
+                                        price: '15р'
+                                    },
+                                    {
+                                        quantity: 'больше 100 стр.',
+                                        price: '10р'
+                                    },
+                                ]
+                            },
+                            {
+                                subtitle: 'Цветная',
+                                price: [
+                                    {
+                                        quantity: 'до 10 стр.',
+                                        price: '40р'
+                                    },
+                                    {
+                                        quantity: 'от 10 стр.',
+                                        price: '35р'
+                                    },
+                                    {
+                                        quantity: 'от 50 стр.',
+                                        price: '30р'
+                                    },
+                                ]
+                            }
+                        ],
+                    },
+                ],
+                sideImages: [Polaroid_1],
+            },
+            {
+                name: 'Ксерокопия',
+                products: [
+                    {
+                        options: [
+                            {
+                                subtitle: 'Чёрно-белая',
+                                price: [
+                                    {
+                                        quantity: 'до 20 стр.',
+                                        price: '15р'
+                                    },
+                                    {
+                                        quantity: 'от 21 стр.',
+                                        price: '10р'
+                                    },
+                                ]
+                            },
+                            {
+                                subtitle: 'Цветная',
+                                price: '40р'
+                            }
+                        ]
+                    }
+                ],
+            },
+            {
+                name: 'Ламинация',
+                products: [
+                    {
+                        title: 'А6',
+                        price: '80р'
+                    },
+                    {
+                        title: 'А5',
+                        price: '100р'
+                    },
+                    {
+                        title: 'А4',
+                        price: '150р'
+                    },
+                    {
+                        title: 'А3',
+                        price: '250р'
+                    },
+
+                ],
+                sideImages: [Polaroid_3],
+            },
+            {
+                name: 'Брошюровка',
+                products: [
+                    {
+                        title: 'Формат А4',
+                        options: [
+                            {
+                                subtitle: 'до 50 листов',
+                                price: '200р'
+                            },
+                            {
+                                subtitle: 'до 100 листов',
+                                price: '300р'
+                            },
+                            {
+                                subtitle: 'до 200 листов',
+                                price: '400р'
+                            },
+                            {
+                                subtitle: 'до 300 листов',
+                                price: '500р'
+                            },
+                        ],
+                    },
+                    {
+                        title: 'Формат А3',
+                        options: [
+                            {
+                                subtitle: 'до 50 листов',
+                                price: '500р'
+                            },
+                        ],
+                    },
+                ],
+                sideImages: [Polaroid_4],
+            },
+            // Другие товары и услуги
+        ],
+    },
 ];
 
 export default officeServicesList;

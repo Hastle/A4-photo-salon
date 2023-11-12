@@ -477,7 +477,157 @@ const photoSouvenirsList = [
                 ],
             }
         ],
-    }
+    },
+    {
+        id: 4,
+        services: [
+            {
+                name: 'Кружки',
+                products: [
+                    {
+                        title: 'Кружка белая/цветная',
+                        price: '650р'
+                    },
+                ],
+                sideImages: [Polaroid_1],
+            },
+            {
+                name: 'Футболки',
+                products: [
+                    {
+                        title: 'Футболка белая (с одной стороны)',
+                        price: 'от 1190р'
+                    },
+                    {
+                        title: 'Футболка белая (с двух сторон)',
+                        price: 'от 1390р'
+                    },
+                    {
+                        title: 'Печать на черной',
+                        price: 'от 1900р'
+                    },
+                    {
+                        title: 'Печать на своей белой футболке',
+                        price: 'от 1700р'
+                    },
+                ],
+                sideImages: [Polaroid_2],
+            },
+            {
+                products: [
+                    {
+                        options: [
+                            {
+                                subtitle: 'Пазлы',
+                                price: 'от 800р',
+                                isBold: true,
+                            },
+                            {
+                                subtitle: 'Фотомагнит',
+                                price: '250р',
+                                isBold: true,
+                            },
+                            {
+                                subtitle: 'Календарь перекидной',
+                                price: 'от 2500р',
+                                isBold: true,
+                            },
+                            {
+                                subtitle: 'Обложка на автодокументы',
+                                price: '1600р',
+                                isBold: true,
+                            },
+                            {
+                                subtitle: 'Подушки',
+                                price: 'от 1300р',
+                                isBold: true,
+                            },
+                            {
+                                subtitle: 'Брелок гос. номер',
+                                price: '400р',
+                                isBold: true,
+                            },
+                        ]
+                    }
+                ],
+            }
+        ],
+    },
+    {
+        id: 5,
+        services: [
+            {
+                name: 'Кружки',
+                products: [
+                    {
+                        title: 'Кружка белая/цветная',
+                        price: '650р'
+                    },
+                ],
+                sideImages: [Polaroid_1],
+            },
+            {
+                name: 'Футболки',
+                products: [
+                    {
+                        title: 'Футболка белая (с одной стороны)',
+                        price: 'от 1190р'
+                    },
+                    {
+                        title: 'Футболка белая (с двух сторон)',
+                        price: 'от 1390р'
+                    },
+                    {
+                        title: 'Печать на черной',
+                        price: 'от 1900р'
+                    },
+                    {
+                        title: 'Печать на своей белой футболке',
+                        price: 'от 1700р'
+                    },
+                ],
+                sideImages: [Polaroid_2],
+            },
+            {
+                products: [
+                    {
+                        options: [
+                            {
+                                subtitle: 'Пазлы',
+                                price: 'от 800р',
+                                isBold: true,
+                            },
+                            {
+                                subtitle: 'Фотомагнит',
+                                price: '250р',
+                                isBold: true,
+                            },
+                            {
+                                subtitle: 'Календарь перекидной',
+                                price: 'от 2500р',
+                                isBold: true,
+                            },
+                            {
+                                subtitle: 'Обложка на автодокументы',
+                                price: '1600р',
+                                isBold: true,
+                            },
+                            {
+                                subtitle: 'Подушки',
+                                price: 'от 1300р',
+                                isBold: true,
+                            },
+                            {
+                                subtitle: 'Брелок гос. номер',
+                                price: '400р',
+                                isBold: true,
+                            },
+                        ]
+                    }
+                ],
+            }
+        ],
+    },
     // Другие объекты для других id могут быть добавлены здесь, если необходимо.
 ];
 
