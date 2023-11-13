@@ -1,20 +1,11 @@
-import React, {useEffect, useState} from "react";
-import {useSelectedValue} from "../../context/SelectedValueContext";
-import officeList from "../../data/officeList";
+import React from "react";
 import CategoryInfo from "../../components/CategoryInfo/CategoryInfo";
 import officeServices from "../../data/officeServicesList";
+import useSelectedOfficeData from "../../hooks/useSelectedOfficeData";
 
 function OfficeServices() {
-    const { selectedValue } = useSelectedValue();
-    const [selectedOffice, setSelectedOffice] = useState(1);
-    const [selectedOfficeData, setSelectedOfficeData] = useState(null);
+    const { selectedOffice, selectedOfficeData } = useSelectedOfficeData(officeServices);
 
-    useEffect(() => {
-        const selectedOffice = officeList.find(office => office.id === selectedValue).id;
-        setSelectedOffice(selectedOffice);
-        const officeData = officeServices.find((office) => office.id === selectedValue);
-        setSelectedOfficeData(officeData);
-    }, [selectedValue]);
     return (
         <>
             <div className="col-md-12">

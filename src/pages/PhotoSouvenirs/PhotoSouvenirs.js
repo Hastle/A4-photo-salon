@@ -1,20 +1,11 @@
-import React, {useEffect, useState} from "react";
-import {useSelectedValue} from "../../context/SelectedValueContext";
-import officeList from "../../data/officeList";
+import React from "react";
+import useSelectedOfficeData from "../../hooks/useSelectedOfficeData";
 import photoSouvenirsList from "../../data/photoSouvenirsList";
 import CategoryInfo from "../../components/CategoryInfo/CategoryInfo";
 
 function PhotoSouvenirs() {
-    const { selectedValue } = useSelectedValue();
-    const [selectedOffice, setSelectedOffice] = useState(1);
-    const [selectedOfficeData, setSelectedOfficeData] = useState(null);
+    const { selectedOffice, selectedOfficeData } = useSelectedOfficeData(photoSouvenirsList);
 
-    useEffect(() => {
-        const selectedOffice = officeList.find(office => office.id === selectedValue).id;
-        setSelectedOffice(selectedOffice);
-        const officeData = photoSouvenirsList.find((office) => office.id === selectedValue);
-        setSelectedOfficeData(officeData);
-    }, [selectedValue]);
     return (
         <>
             <div className="col-md-12">
@@ -23,8 +14,7 @@ function PhotoSouvenirs() {
             {selectedOfficeData &&
                 selectedOfficeData.services.map((service, index) => (
                     <CategoryInfo key={index} officeId={selectedOffice} categoryName={service.name} responseData={photoSouvenirsList} />
-                ))
-            }
+                ))}
         </>
     );
 }
