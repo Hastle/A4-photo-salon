@@ -1,0 +1,16 @@
+@import "../../styles/mixins"
+/*==========  Form  ==========*/
+.form_group
+	display: flex
+	flex-direction: column
+	label
+		margin: 7px 0
+		font-size: 30px
+	input, select
+		font-size: 24px !important
+		border: 2px solid $border
+		max-width: 470px
+		padding: 18px 10px
+		&::placeholder
+			color: $placeholder
+			font-size: 24px
