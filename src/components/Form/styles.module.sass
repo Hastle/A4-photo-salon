@@ -1,5 +1,22 @@
 @import "../../styles/mixins"
 /*==========  Form  ==========*/
+form
+	max-width: 470px
+	button
+		font-size: 20px
+		margin: 0 auto
+		background-color: $light-yellow
+		color: $black
+		border: 2px solid $border
+		padding: 10px 20px
+		cursor: pointer
+		+flow
+		&:hover
+			background-color: lighten($primary-yellow, 5%)
+
+		&:active
+			background-color: lighten($primary-yellow, 10%)
+
 .form_group
 	display: flex
 	flex-direction: column
@@ -9,7 +26,6 @@
 	input, select
 		font-size: 24px !important
 		border: 2px solid $border
-		max-width: 470px
 		padding: 18px 10px
 		&::placeholder
 			color: $placeholder
