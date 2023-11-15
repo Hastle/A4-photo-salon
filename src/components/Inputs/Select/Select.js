@@ -2,17 +2,18 @@ import React, { useEffect, useState } from "react";
 import useSelectedOfficeData from "../../../hooks/useSelectedOfficeData";
 import officeList from "../../../data/officeList";
 
-function Select({ label }) {
+function Select({ label, onChange }) {
     const { selectedOffice } = useSelectedOfficeData();
     const [formSelectedValue, setFormSelectedValue] = useState(selectedOffice || "");
 
     useEffect(() => {
-        setFormSelectedValue(selectedOffice || "");
-    }, [selectedOffice]);
+        onChange(formSelectedValue);
+    }, [onChange, formSelectedValue]);
 
     const handleSelectChange = (event) => {
         const newValue = event.target.value;
         setFormSelectedValue(newValue);
+        onChange(newValue);
     };
 
     return (

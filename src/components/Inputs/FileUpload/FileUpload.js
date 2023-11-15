@@ -1,31 +1,37 @@
 import React from "react";
-import Dropzone, {useDropzone} from "react-dropzone";
+import { useDropzone } from "react-dropzone";
+import { ImPlus } from "react-icons/im";
 import styles from "./styles.module.sass";
-function FileUpload({ label }) {
-    const {
-        // getRootProps,
-        // getInputProps,
-        // isFocused,
-        // isDragAccept,
-        // isDragReject
-    } = useDropzone({accept: {'image/*': []}});
+
+function FileUpload({ label, onFileUpload }) {
+    const { acceptedFiles, getRootProps, getInputProps } = useDropzone({
+        accept: {
+            'image/jpeg': [],
+            'image/png': []
+        },
+        onDrop: handleDrop
+    })
+
+    const files = acceptedFiles.map((file) => (
+        <li key={file.path}>
+            {file.path} - {file.size} bytes
+        </li>
+    ));
+
+    function handleDrop(acceptedFiles) {
+        onFileUpload(acceptedFiles);
+    }
+
     return (
         <>
             <label>{label}</label>
-            <Dropzone onDrop={files => console.log(files)}>
-                {({getRootProps, getInputProps}) => (
-                    <div
-                        {...getRootProps({
-                            className: 'dropzone',
-                            onDrop: event => event.stopPropagation()
-                        })}
-                        className={styles.upload_container}
-                    >
-                        <input {...getInputProps()} />
-                        <p>Перетащите файлы сюда или нажмите, чтобы выбрать файлы</p>
-                    </div>
-                )}
-            </Dropzone>
+            <div {...getRootProps({ className: `${styles.upload_container}` })}>
+                <input {...getInputProps()} />
+                <ImPlus className={styles.icon} />
+            </div>
+            <div className={styles.upload_files}>
+                <ul>{files}</ul>
+            </div>
         </>
     );
 }
