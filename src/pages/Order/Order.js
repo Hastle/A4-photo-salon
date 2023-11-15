@@ -11,7 +11,7 @@ function Order() {
                 <p>Внимательно проверяйте информацию</p>
                 <p>Когда заказ будет готов, сотрудники фотосалона свяжутся с вами </p>
             </div>
-            <div className="col-md-6">
+            <div className="col-md-auto">
                 <Form />
             </div>
         </>
