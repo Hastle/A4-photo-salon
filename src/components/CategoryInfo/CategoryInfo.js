@@ -68,24 +68,20 @@ function CategoryInfo({ officeId, categoryName, responseData }) {
                     </div>
                 ) : null
                 }
-                {product.options && (
-                    <div>
-                        {product.options.map((option, index) => (
-                            <div key={index}>
-                                {Array.isArray(option.price) ? (
-                                    <>
-                                        <p>{option.subtitle}</p>
-                                        {option.price.map((subOption, index) => (
-                                            <PriceInfo key={index} item={subOption.quantity} price={subOption.price} />
-                                        ))}
-                                    </>
-                                ) : (
-                                    <PriceInfo item={option.subtitle} price={option.price} priceAddition={option.priceAddition} className={option.isBold ? styles.headline : null} />
-                                )}
-                            </div>
-                        ))}
+                {product.options && product.options.map((option, index) => (
+                    <div key={index}>
+                        {Array.isArray(option.price) ? (
+                            <>
+                                <p>{option.subtitle}</p>
+                                {option.price.map((subOption, index) => (
+                                    <PriceInfo key={index} item={subOption.quantity} price={subOption.price} />
+                                ))}
+                            </>
+                        ) : (
+                            <PriceInfo item={option.subtitle} price={option.price} priceAddition={option.priceAddition} className={option.isBold ? styles.headline : null} />
+                        )}
                     </div>
-                )}
+                ))}
                 {product.description && <p>{product.description}</p>}
             </div>
         );
