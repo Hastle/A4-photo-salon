@@ -4,15 +4,20 @@ import officeList from "../data/officeList";
 
 const useSelectedOfficeData = (dataList) => {
     const { selectedValue } = useSelectedValue();
-    const [selectedOffice, setSelectedOffice] = useState(1);
+    const defaultValue = 1;
+    const resolvedSelectedValue = selectedValue || defaultValue;
+
+    const [selectedOffice, setSelectedOffice] = useState(defaultValue);
     const [selectedOfficeData, setSelectedOfficeData] = useState(null);
 
     useEffect(() => {
-        const selectedOfficeId = (dataList || officeList).find((office) => office.id === selectedValue)?.id;
-        setSelectedOffice(selectedOfficeId);
-        const officeData = (dataList || officeList).find((office) => office.id === selectedValue);
-        setSelectedOfficeData(officeData);
-    }, [selectedValue, dataList]);
+        const selectedOfficeItem = (dataList || officeList)?.find?.((office) => office.id === resolvedSelectedValue);
+
+        if (selectedOfficeItem) {
+            setSelectedOffice(selectedOfficeItem.id);
+            setSelectedOfficeData(selectedOfficeItem);
+        }
+    }, [resolvedSelectedValue, dataList]);
 
     return { selectedOffice, selectedOfficeData };
 };
