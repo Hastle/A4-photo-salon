@@ -10,6 +10,7 @@ import "./burger.sass";
 import styles from "./styles.module.sass";
 
 function Header() {
+    const defaultValue = 1;
     const { selectedValue, setSelectedValue } = useSelectedValue();
     const [isMenuOpen, setIsMenuOpen] = useState(false);
 
@@ -17,6 +18,8 @@ function Header() {
         const savedValue = localStorage.getItem("selectedOfficeId");
         if (savedValue) {
             setSelectedValue(parseInt(JSON.parse(savedValue), 10));
+        } else {
+            console.log("Здесь происходит вызов modal");
         }
     }, []);
 
@@ -37,7 +40,6 @@ function Header() {
         setSelectedValue(parseInt(newValue, 10));
         closeMenu();
     };
-
     return (
         <header className={styles.header}>
             <div className={styles.main_menu}>
@@ -68,7 +70,7 @@ function Header() {
                         <MdLocationOn className={styles.icon} />
                         <select
                             name="address-current"
-                            value={selectedValue.toString()}
+                            value={selectedValue ? selectedValue.toString() : defaultValue.toString()}
                             onChange={handleSelectChange}
                         >
                             {officeList.map((office) => (
