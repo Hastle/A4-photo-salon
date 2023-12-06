@@ -8,18 +8,20 @@ import Burger from '@animated-burgers/burger-squeeze';
 import '@animated-burgers/burger-squeeze/dist/styles.css';
 import "./burger.sass";
 import styles from "./styles.module.sass";
+import Modal from "../Modal/Modal";
 
 function Header() {
     const defaultValue = 1;
     const { selectedValue, setSelectedValue } = useSelectedValue();
     const [isMenuOpen, setIsMenuOpen] = useState(false);
+    const [isModalOpen, setIsModalOpen] = useState(false);
 
     useEffect(() => {
         const savedValue = localStorage.getItem("selectedOfficeId");
         if (savedValue) {
             setSelectedValue(parseInt(JSON.parse(savedValue), 10));
         } else {
-            console.log("Здесь происходит вызов modal");
+            setIsModalOpen(true);
         }
     }, []);
 
@@ -41,6 +43,7 @@ function Header() {
         closeMenu();
     };
     return (
+        <>
         <header className={styles.header}>
             <div className={styles.main_menu}>
                 <div className={styles.navigation_layer}>
@@ -83,6 +86,10 @@ function Header() {
                 </nav>
             </div>
         </header>
+        <Modal open={isModalOpen} onClose={() => setIsModalOpen(false)} title={"Выберите магазин"}>
+            <p className="modal-content">В разных магазинах цены на товары и услуги могут отличатся. Пожалуйста, выберите удобный для вас магазин.</p>
+        </Modal>
+    </>
     );
 }
 
