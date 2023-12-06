@@ -1,1 +1,55 @@
 @import "../../styles/mixins"
+/*==========  Modal  ==========*/
+.modal_overlay
+	position: fixed
+	display: flex
+	justify-content: center
+	align-items: center
+	top: 0
+	left: 0
+	width: 100vw
+	height: 100vh
+	background-color: rgba(108, 105, 99, 0.7)
+	z-index: 300
+	opacity: 0
+	pointer-events: none
+	+flow
+.modal_overlay_active
+	opacity: 1
+	pointer-events: all
+	+flow
+.modal
+	display: flex
+	flex-direction: column
+	position: relative
+	padding: 20px
+	+border-rds
+	background-color: white
+	height: auto
+	width: 40vw
+	max-width: 775px
+.modal_header
+	display: flex
+	justify-content: space-between
+	align-items: center
+.modal_body
+	display: flex
+.btn_close
+	cursor: pointer
+	color: $black
+	font-size: 22px
+@media only screen and (max-width : 1400px)
+	.modal
+		width: 60vw
+@media only screen and (max-width : 1200px)
+	.modal
+		width: 60vw
+@media only screen and (max-width : 992px)
+	.modal
+		width: 70vw
+@media only screen and (max-width : 768px)
+	.modal
+		width: 80vw
+@media only screen and (max-width : 480px)
+	.modal
+		width: 90vw
