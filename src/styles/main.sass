@@ -89,8 +89,6 @@ p
 	color: $black
 	+regular
 	font-size: 24px
-	&.modal-content
-		font-size: 18px !important
 /*==========  Carousel  ==========*/
 .carousel
 	display: flex
@@ -112,6 +110,23 @@ p
 			cursor: col-resize
 	img
 		display: flex
+/*==========  Modal  ==========*/
+p.modal-content
+	display: flex
+	font-size: 18px !important
+.address-item
+	display: flex
+	padding: 10px 10px
+.address-info
+	display: flex
+	flex-direction: column
+	margin-left: 10px
+	p
+		display: flex
+		font-size: 18px !important
+		margin: 0
+	span
+		color: $placeholder
 /*==========  Media query  ==========*/
 @media only screen and (max-width : 1400px)
 
