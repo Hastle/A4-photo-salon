@@ -60,7 +60,7 @@ function Form() {
                 <FileUpload label={"Загрузите фотографии"} onFileUpload={handleFileUpload} />
             </div>
             <div className={styles.form_group}>
-                <button type="submit">Отправить</button>
+                <button className="primary-btn" type="submit">Отправить</button>
             </div>
         </form>
     );
