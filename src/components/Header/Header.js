@@ -19,10 +19,13 @@ function Header() {
 
     useEffect(() => {
         const savedValue = localStorage.getItem("selectedOfficeId");
+        const openModalWithDelay = () => {
+            setIsModalOpen(true);
+        };
         if (savedValue === null) {
             setSelectedValue(parseInt(JSON.parse(savedValue), 10));
         } else {
-            setIsModalOpen(true);
+            setTimeout(openModalWithDelay, 10000);
         }
     }, []);
 
@@ -102,7 +105,7 @@ function Header() {
                             адрес.
                         </p>
                         {officeList.map((office) => (
-                            <div className="address-item" key={office.id}>
+                            <label className="address-item" key={office.id}>
                                 <input
                                     type="checkbox"
                                     value={office.id}
@@ -115,9 +118,9 @@ function Header() {
                                     </p>
                                     <span>{office.schedule}</span>
                                 </div>
-                            </div>
+                            </label>
                         ))}
-                        <button onClick={handleCheckboxConfirm}>Выбрать</button>
+                        <button className="primary-btn" onClick={handleCheckboxConfirm}>Выбрать</button>
                     </Modal>
                 )}
             </header>
