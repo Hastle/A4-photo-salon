@@ -59,6 +59,7 @@ button:focus
 /*==========  General  ==========*/
 .justify-content-center
 	display: flex
+	justify-content: center
 h3
 	+bold
 	font-size: 31px
@@ -89,6 +90,20 @@ p
 	color: $black
 	+regular
 	font-size: 24px
+.primary-btn
+	font-size: 20px
+	margin: 0 auto
+	color: $black
+	border: 2px solid $black
+	padding: 10px 20px
+	cursor: pointer
+	+flow
+	&:hover
+		background-color: $primary-yellow
+		+flow
+	&:active
+		background-color: lighten($primary-yellow, 5%)
+		+flow
 /*==========  Carousel  ==========*/
 .carousel
 	display: flex
@@ -111,22 +126,27 @@ p
 	img
 		display: flex
 /*==========  Modal  ==========*/
-p.modal-content
-	display: flex
-	font-size: 18px !important
-.address-item
-	display: flex
-	padding: 10px 10px
-.address-info
-	display: flex
-	flex-direction: column
-	margin-left: 10px
-	p
+#modal-root
+	p.modal-content
 		display: flex
 		font-size: 18px !important
-		margin: 0
-	span
-		color: $placeholder
+	.address-item
+		display: flex
+		padding: 10px 10px
+		align-items: center
+	.address-info
+		display: flex
+		flex-direction: column
+		margin-left: 10px
+		p
+			display: flex
+			font-size: 18px !important
+			margin: 0
+		span
+			color: $placeholder
+	input
+		width: 18px
+		height: 18px
 /*==========  Media query  ==========*/
 @media only screen and (max-width : 1400px)
 
