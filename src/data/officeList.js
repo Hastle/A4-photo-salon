@@ -67,7 +67,7 @@ const officeList = [
     },
     {
         id: 5,
-        city: 'Москва',
+        city: 'Митино',
         address: 'ул. Дубравная, 51с2',
         department: 'ТЦ «ГЛОБУС»',
         phone: '8(985)444-08-40',
